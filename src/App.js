@@ -132,7 +132,7 @@ function App() {
 					<div className="pbl-5 border-right"> </div>
 					<div className="thirdColumn  pbl-5 border-left border-bottom border-top"></div>
 					<div className="pbl-5 border-right border-danger"></div>
-					<div className="thirdColumn  pbl-5 border-left  border-top"></div>
+					<div className="thirdColumn  pbl-5 border-left  border-top border-bottom"></div>
 				</Col>
 				<Col md={4} className="thirdColumn vh-100 d-none d-lg-block"></Col>
 			</Row>
