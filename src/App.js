@@ -96,7 +96,7 @@ function App() {
     The partial face in the background is Ella, one of my twin toddlers.
   </p>
   <hr />
-  <p className="mb-0">
+  <p className="mb-0"></p>
     <Row>
       <Col><div ><ul>
       <li>react</li>
@@ -121,20 +121,20 @@ function App() {
     
     
     
-  </p>
+  
 </Alert>
 </Col>
             
           </Row>
 				</Col>
-				<Col md={1} className="m-0 p-0 d-lg-none">
+				<Col md={1} className="m-0 p-0 d-none d-lg-block">
 					<div className="thirdColumn  pbl-5 border-left border-bottom"> </div>
 					<div className="pbl-5 border-right"> </div>
 					<div className="thirdColumn  pbl-5 border-left border-bottom border-top"></div>
 					<div className="pbl-5 border-right border-danger"></div>
 					<div className="thirdColumn  pbl-5 border-left  border-top"></div>
 				</Col>
-				<Col md={4} className="thirdColumn vh-100"></Col>
+				<Col md={4} className="thirdColumn vh-100 d-none d-lg-block"></Col>
 			</Row>
 		</div>
 	);
