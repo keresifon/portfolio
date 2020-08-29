@@ -91,9 +91,9 @@ function App() {
           </Row><Row className=" justify-content-between">
           <Col md={{ span: 8, offset: 3 }} > 
           <Alert variant="outline-danger" className="alert border">
-  <Alert.Heading>Credits & Dependencies</Alert.Heading>
+  <Alert.Heading>Credit & Dependencies</Alert.Heading>
   <p>
-    The partial face in the background is Ella, one of my twin toddlers.
+    The model in the background is Ella, one of my twin toddlers.
   </p>
   <hr />
   <p className="mb-0"></p>
