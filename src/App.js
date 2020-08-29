@@ -127,7 +127,7 @@ function App() {
             
           </Row>
 				</Col>
-				<Col md={1} className="m-0 p-0">
+				<Col md={1} className="m-0 p-0 d-lg-none">
 					<div className="thirdColumn  pbl-5 border-left border-bottom"> </div>
 					<div className="pbl-5 border-right"> </div>
 					<div className="thirdColumn  pbl-5 border-left border-bottom border-top"></div>
