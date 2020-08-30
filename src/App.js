@@ -1,8 +1,9 @@
 import React from 'react'
 import './App.scss';
-import { Col, Row, Alert } from 'react-bootstrap';
+import { Col, Row, Alert} from 'react-bootstrap';
 import ReactTextRotator from 'react-text-rotator';
 import { FaFacebook, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
+import Content from './component/Content';
 
 function App() {
 	const content = [
@@ -114,6 +115,7 @@ function App() {
     <Col><div >
         <ul>
         <li>sass</li>
+		<li>react-animated-tree</li>
       
     </ul></div>
     </Col>
@@ -134,7 +136,9 @@ function App() {
 					<div className="pbl-5 border-right border-danger"></div>
 					<div className="thirdColumn  pbl-5 border-left  border-top border-bottom"></div>
 				</Col>
-				<Col md={4} className="thirdColumn vh-100 d-none d-lg-block"></Col>
+				<Col md={4} className="thirdColumn vh-100 py-5">
+				<Content />
+				</Col>
 			</Row>
 		</div>
 	);

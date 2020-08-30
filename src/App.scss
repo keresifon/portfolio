@@ -96,14 +96,12 @@ html { height: 100%;
 }
 .introColor {
   color:white;
-  z-index: 20;
   font-family: 'Montserrat';
 
 }
 
 .introRed {
   color:red;
-  z-index: 20;
   font-family: 'Montserrat';
 
 }
@@ -124,3 +122,155 @@ html { height: 100%;
   color:white;
 }
 
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom:  0 ;
+
+  a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: 1px solid transparent;
+   // @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus() {
+      border-color: white;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    //color: $nav-tabs-link-active-color;
+    //background-color: $nav-tabs-link-active-bg;
+    border-color: white;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+   // color: $nav-pills-link-active-color;
+    //background-color: $nav-pills-link-active-bg;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  > .nav-link,
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  > .nav-link,
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+
+
+// Tree
+
+
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #373737;
+  overflow: hidden;
+  font-family: 'Monospaced Number', 'Chinese Quote', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+}
+html,
+body,
+div,
+a,
+i,
+button,
+select,
+option,
+optgroup,
+hr,
+br {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.treeview > .toggle {
+  pointer-events: all;
+  cursor: pointer;
+}
+.treeview > .toggle:hover {
+  color: #63b1de;
+  fill: #63b1de;
+}
+
+
+.accordion{
+
+  .card{
+    background-color: transparent;
+  }
+}
