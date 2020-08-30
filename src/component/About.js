@@ -2,6 +2,7 @@ import React from 'react';
 import Experience from './Experience';
 import { Accordion, Card } from 'react-bootstrap'
 import Skills from './Skills';
+import Education from './Education';
 
 function About(props) {
 	return (
@@ -30,6 +31,14 @@ function About(props) {
     </Accordion.Toggle>
     <Accordion.Collapse eventKey="1">
       <Card.Body><Skills/></Card.Body>
+    </Accordion.Collapse>
+  </Card>
+  <Card>
+    <Accordion.Toggle as={Card.Header} eventKey="1">
+    => Education
+    </Accordion.Toggle>
+    <Accordion.Collapse eventKey="1">
+      <Card.Body><Education/></Card.Body>
     </Accordion.Collapse>
   </Card>
 </Accordion>
