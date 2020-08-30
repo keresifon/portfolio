@@ -16,7 +16,7 @@ function About(props) {
 		</div>
         <div>
         
-<Accordion defaultActiveKey="0">
+<Accordion >
   <Card>
     <Accordion.Toggle as={Card.Header} eventKey="0" >
     => Work Experience
@@ -34,10 +34,10 @@ function About(props) {
     </Accordion.Collapse>
   </Card>
   <Card>
-    <Accordion.Toggle as={Card.Header} eventKey="1">
+    <Accordion.Toggle as={Card.Header} eventKey="2">
     => Education
     </Accordion.Toggle>
-    <Accordion.Collapse eventKey="1">
+    <Accordion.Collapse eventKey="2">
       <Card.Body><Education/></Card.Body>
     </Accordion.Collapse>
   </Card>
