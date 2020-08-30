@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Tree from 'react-animated-tree'
 //import './styles.css'
 
