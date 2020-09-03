@@ -4,6 +4,7 @@ import { Col, Row, Alert} from 'react-bootstrap';
 import ReactTextRotator from 'react-text-rotator';
 import { FaFacebook, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
 import Content from './component/Content';
+import { StaticKitProvider } from '@statickit/react';
 
 function App() {
 	const content = [
@@ -30,6 +31,7 @@ function App() {
 	];
 
 	return (
+		<StaticKitProvider site="fb20e75bfacd">
 		<div className="bg vh-100">
 			<Row>
 				<Col md={7}>
@@ -116,6 +118,7 @@ function App() {
         <ul>
         <li>sass</li>
 		<li>react-animated-tree</li>
+		<li>@statickit/react</li>
       
     </ul></div>
     </Col>
@@ -141,6 +144,7 @@ function App() {
 				</Col>
 			</Row>
 		</div>
+		</StaticKitProvider>
 	);
 }
 
