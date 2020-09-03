@@ -8,8 +8,8 @@ function Portfolio(props) {
            
  <CardGroup>
  <div className="container">
- <Card className="bg-dark text-white">
-  <Card.Img src="https://res.cloudinary.com/kwesiblack/image/upload/v1592311817/kwesiblack/home/14425491256_2027bce914_o_ncbxba.jpg" alt="Card image" className="image"/>
+ <Card className="bg-dark text-red">
+  <Card.Img src="https://res.cloudinary.com/kwesiblack/image/upload/v1599143587/portfolio/blue-3329498_640_kckgys.png" alt="Card image" className="image"/>
   <Card.ImgOverlay>
     <Card.Title>Okpogho</Card.Title>
     <Card.Text>
@@ -18,13 +18,13 @@ function Portfolio(props) {
     <Card.Text></Card.Text>
   </Card.ImgOverlay>
   <div class="overlay">
-  <div className="text">Photography Website done in Gatsby<br></br><Button href="https://mongoose-com.herokuapp.com" target="_blank" rel="noopener noreferrer">View</Button></div>
+  <div className="text">Photography Website done in Gatsby<br></br><Button variant="outline-danger" href="https://mongoose-com.herokuapp.com" target="_blank" rel="noopener noreferrer">View</Button></div>
   </div>
 </Card>
   </div>
   <div className="container">
- <Card className="bg-dark text-white">
-  <Card.Img src="https://res.cloudinary.com/kwesiblack/image/upload/v1592311817/kwesiblack/home/14425491256_2027bce914_o_ncbxba.jpg" alt="Card image" className="image fluid"/>
+ <Card className="bg-dark text-red">
+  <Card.Img src="https://res.cloudinary.com/kwesiblack/image/upload/v1599143903/portfolio/robot-507811_640_my5cmy.jpg" alt="Card image" className="image fluid"/>
   <Card.ImgOverlay>
     <Card.Title>LASIMRA</Card.Title>
     <Card.Text>
@@ -33,7 +33,7 @@ function Portfolio(props) {
     <Card.Text></Card.Text>
   </Card.ImgOverlay>
   <div class="overlay">
-  <div className="text"><Button href="https://lasimra.herokuapp.com/" target="_blank" rel="noopener noreferrer">View</Button></div>
+  <div className="text"><Button variant="outline-danger" href="https://lasimra.herokuapp.com/" target="_blank" rel="noopener noreferrer">View</Button></div>
   </div>
 </Card>
   </div>
@@ -41,8 +41,8 @@ function Portfolio(props) {
   <div className="py-2"></div>
   <CardGroup>
  <div className="container">
- <Card className="bg-dark text-white">
-  <Card.Img src="https://res.cloudinary.com/kwesiblack/image/upload/v1592311817/kwesiblack/home/14425491256_2027bce914_o_ncbxba.jpg" alt="Card image" className="image"/>
+ <Card className="bg-dark text-red">
+  <Card.Img src="https://res.cloudinary.com/kwesiblack/image/upload/v1599144607/portfolio/writing-3374234_640_xnsxz0.jpg" alt="Card image" className="image"/>
   <Card.ImgOverlay>
     <Card.Title>Akisok</Card.Title>
     <Card.Text>
@@ -51,13 +51,13 @@ function Portfolio(props) {
     <Card.Text></Card.Text>
   </Card.ImgOverlay>
   <div class="overlay">
-  <div className="text"><br></br><Button href="https://www.akisok.com" target="_blank" rel="noopener noreferrer">View</Button></div>
+  <div className="text"><br></br><Button variant="outline-danger" href="https://www.akisok.com" target="_blank" rel="noopener noreferrer">View</Button></div>
   </div>
 </Card>
   </div>
   <div className="container">
- <Card className="bg-dark text-white">
-  <Card.Img src="https://res.cloudinary.com/kwesiblack/image/upload/v1592311817/kwesiblack/home/14425491256_2027bce914_o_ncbxba.jpg" alt="Card image" className="image fluid"/>
+ <Card className="bg-dark text-red">
+  <Card.Img src="https://res.cloudinary.com/kwesiblack/image/upload/v1599145319/portfolio/IMG_7330-2_hfjmfw.jpg" alt="Card image" className="image fluid"/>
   <Card.ImgOverlay>
     <Card.Title>Kwesiblack Photography</Card.Title>
     <Card.Text>
@@ -66,7 +66,7 @@ function Portfolio(props) {
     <Card.Text></Card.Text>
   </Card.ImgOverlay>
   <div class="overlay">
-    <div className="text"><Button href="https://www.kwesiblack.com" target="_blank" rel="noopener noreferrer">View</Button></div>
+    <div className="text"><Button variant="outline-danger" href="https://www.kwesiblack.com" target="_blank" rel="noopener noreferrer">View</Button></div>
     
   </div>
 </Card>
