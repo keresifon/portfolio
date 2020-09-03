@@ -18,7 +18,7 @@ function Portfolio(props) {
     <Card.Text></Card.Text>
   </Card.ImgOverlay>
   <div class="overlay">
-  <div className="text">Photography Website done in Gatsby<br></br><Button variant="outline-danger" href="https://mongoose-com.herokuapp.com" target="_blank" rel="noopener noreferrer">View</Button></div>
+  <div className="text"><Button variant="outline-danger" href="https://mongoose-com.herokuapp.com" target="_blank" rel="noopener noreferrer">View</Button></div>
   </div>
 </Card>
   </div>
