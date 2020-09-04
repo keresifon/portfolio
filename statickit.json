@@ -3,7 +3,7 @@
         "forms": {
           "contactForm": {
             "name": "Contact Form",
-            "actions": [{ "type": "email", "to": "keresifon@gmail.com" }]
+            "actions": [{ "type": "email", "to": "keresifon.isidore@gmail.com" }]
           }
         }
       }
