@@ -20,32 +20,34 @@ const Skills = () => (
     <div>
   <Tree content="Technical Skills"   open style={treeStyles}>
     <Tree content="Frontend" type={<span style={typeStyles}></span>}  >
-        <Tree content="HTML" style={{ color: 'red', align : 'justify'}} />
-        <Tree content="CSS" style={{ color: 'red' }} />
-        <Tree content="Javascript" style={{ color: 'red' }} />
-        <Tree content="React" style={{ color: 'red' }} />
-        <Tree content="Bootstrap" style={{ color: 'red' }} />
-        <Tree content="Gatsby" style={{ color: 'red' }} />
+        <Tree content="HTML" style={{ color: 'white', align : 'justify'}} />
+        <Tree content="CSS" style={{ color: 'white' }} />
+        <Tree content="Javascript" style={{ color: 'white' }} />
+        <Tree content="React" style={{ color: 'white' }} />
+        <Tree content="Bootstrap" style={{ color: 'white' }} />
+        <Tree content="Gatsby" style={{ color: 'white' }} />
         </Tree>
     <Tree content="Backend" type={<span style={typeStyles}></span>}  >
-        <Tree content="NodeJs" style={{ color: 'red', align : 'justify'}} />
-        <Tree content="MongoDB" style={{ color: 'red' }} />
-        <Tree content="MySQL" style={{ color: 'red' }} />
-        <Tree content="MSSQL" style={{ color: 'red' }} />
-        <Tree content="REST API" style={{ color: 'red' }} />
+        <Tree content="NodeJs" style={{ color: 'white', align : 'justify'}} />
+        <Tree content="MongoDB" style={{ color: 'white' }} />
+        <Tree content="MySQL" style={{ color: 'white' }} />
+        <Tree content="MSSQL" style={{ color: 'white' }} />
+        <Tree content="REST API" style={{ color: 'white' }} />
         </Tree>
     <Tree content="DevOps" type={<span style={typeStyles}></span>}  >
-        <Tree content="Version Control /GITt" style={{ color: 'red', align : 'justify'}} />
-        <Tree content="Docker" style={{ color: 'red' }} />
-        <Tree content="Heroku" style={{ color: 'red' }} />
-        <Tree content="Netlify" style={{ color: 'red' }} />
-        <Tree content="Apache" style={{ color: 'red' }} />
-        <Tree content="Nginx" style={{ color: 'red' }} />
-        <Tree content="DNS, SSL" style={{ color: 'red' }} />
+        <Tree content="Version Control /GIT" style={{ color: 'white', align : 'justify'}} />
+        <Tree content="Docker" style={{ color: 'white' }} />
+        <Tree content="Heroku" style={{ color: 'white' }} />
+        <Tree content="Netlify" style={{ color: 'white' }} />
+        <Tree content="Apache" style={{ color: 'white' }} />
+        <Tree content="Nginx" style={{ color: 'white' }} />
+        <Tree content="DNS, SSL" style={{ color: 'white' }} />
         </Tree>
      <Tree content="Others" type={<span style={typeStyles}></span>}  >
-        <Tree content="Data Analysis - Tableau , Metabase " style={{ color: 'red', align : 'justify'}} />
-        <Tree content="Helpdesk - Zoho Desk, JIRA, " style={{ color: 'red' }} />
+        <Tree content="Data Analysis - Tableau , Metabase " style={{ color: 'white', align : 'justify'}} />
+        <Tree content="Helpdesk - Zoho Desk, JIRA " style={{ color: 'white' }} />
+        <Tree content="Document Mangement - Alfreco " style={{ color: 'white' }} />
+        <Tree content="ERP - erpnext " style={{ color: 'white' }} />
         </Tree>
 
     </Tree>
