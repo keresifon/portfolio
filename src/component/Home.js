@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Alert, Container } from 'react-bootstrap';
+import {  Alert } from 'react-bootstrap';
 import ReactTextRotator from 'react-text-rotator';
 import { FaFacebook, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
 import Content from '../component/Content';
@@ -28,7 +28,8 @@ function Home(props) {
 		},
 	];
 	return (
-		<div className="bg vh-100">
+		
+		<div className="container-fluid bg">
 			<div className="row">
 				<div className="col py-5">
 					<div>
