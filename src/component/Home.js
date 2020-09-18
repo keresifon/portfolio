@@ -32,6 +32,7 @@ function Home(props) {
 		<div className="container-fluid bg">
 			<div className="row">
 				<div className="col py-5">
+				<Animated animationIn="flash" animationOut="fadeOut" animationInDuration={3000} isVisible={true}> 
 					<div>
 						<a
 							href="https://github.com/keresifon"
@@ -67,6 +68,7 @@ function Home(props) {
 							<FaInstagram className="h1  iconColor" />
 						</a>
 					</div>
+					</Animated>
 					<Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={3000} isVisible={true}>
 						<div className=" ml-5 py-5">
 							<div className="welcome">Welcome</div>
@@ -77,7 +79,7 @@ function Home(props) {
 							</div>
 						</div>
 					</Animated>
-					<div className="pbl-6"></div>
+					<div className="pbl-6 d-none d-sm-block "></div>
 					<Animated
 						animationIn="bounceInLeft"
 						animationOut="fadeOut"
@@ -127,7 +129,7 @@ function Home(props) {
 					</Animated>
 				</div>
 
-				<div className="col">
+				<div className="col ">
 					<Animated
 						animationIn="bounceInRight"
 						animationOut="fadeOut"
