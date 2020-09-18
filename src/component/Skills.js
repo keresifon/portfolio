@@ -42,11 +42,13 @@ const Skills = () => (
         <Tree content="Apache" style={{ color: 'white' }} />
         <Tree content="Nginx" style={{ color: 'white' }} />
         <Tree content="DNS, SSL" style={{ color: 'white' }} />
+        <Tree content="Google Cloud Computing" style={{ color: 'white' }} />
+        <Tree content="AWS" style={{ color: 'white' }} />
         </Tree>
      <Tree content="Others" type={<span style={typeStyles}></span>}  >
         <Tree content="Data Analysis - Tableau , Metabase " style={{ color: 'white', align : 'justify'}} />
         <Tree content="Helpdesk - Zoho Desk, JIRA " style={{ color: 'white' }} />
-        <Tree content="Document Mangement - Alfreco " style={{ color: 'white' }} />
+        <Tree content="Document Mangement - Alfresco " style={{ color: 'white' }} />
         <Tree content="ERP - erpnext " style={{ color: 'white' }} />
         </Tree>
 
