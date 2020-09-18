@@ -78,7 +78,7 @@ function Home(props) {
 					<div>
 						<Alert variant="outline-danger" className="alert border">
 							<Alert.Heading>Credit & Dependencies</Alert.Heading>
-							<p>The model in the background is Ella, one of my twin toddlers.</p>
+							<p>Ella , the model in the background, is one of my twin toddlers.</p>
 							<hr />
 							<p className="mb-0"></p>
 						
