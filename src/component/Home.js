@@ -23,6 +23,11 @@ function Home(props) {
 			animation: 'fade',
 		},
 		{
+			text: 'AWS.',
+			className: 'h1 text-center introRed',
+			animation: 'fade',
+		},
+		{
 			text: 'Photographer.',
 			className: 'h1 text-center introRed',
 			animation: 'fade',
@@ -32,42 +37,42 @@ function Home(props) {
 		<div className="container-fluid bg">
 			<div className="row">
 				<div className="col py-5">
-				<Animated animationIn="flash" animationOut="fadeOut" animationInDuration={3000} isVisible={true}> 
-					<div>
-						<a
-							href="https://github.com/keresifon"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="p-3"
-						>
-							<FaGithub className="h1  iconColor" />
-						</a>
-						<a
-							href="https://www.facebook.com/KwesiFBlack"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="p-3"
-						>
-							<FaFacebook className="h1  iconColor" />
-						</a>
-						<a
-							href="https://twitter.com/kwesiblak"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="p-3"
-						>
-							<FaTwitter className="h1  iconColor" />
-						</a>
+					<Animated animationIn="flash" animationOut="fadeOut" animationInDuration={3000} isVisible={true}>
+						<div>
+							<a
+								href="https://github.com/keresifon"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-3"
+							>
+								<FaGithub className="h1  iconColor" />
+							</a>
+							<a
+								href="https://www.facebook.com/KwesiFBlack"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-3"
+							>
+								<FaFacebook className="h1  iconColor" />
+							</a>
+							<a
+								href="https://twitter.com/kwesiblak"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-3"
+							>
+								<FaTwitter className="h1  iconColor" />
+							</a>
 
-						<a
-							href="https://www.instagram.com/keresifon/?hl=en"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="p-3"
-						>
-							<FaInstagram className="h1  iconColor" />
-						</a>
-					</div>
+							<a
+								href="https://www.instagram.com/keresifon/?hl=en"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-3"
+							>
+								<FaInstagram className="h1  iconColor" />
+							</a>
+						</div>
 					</Animated>
 					<Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={3000} isVisible={true}>
 						<div className=" ml-5 py-5">
