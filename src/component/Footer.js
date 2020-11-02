@@ -7,7 +7,7 @@ function Footer(props) {
    <div  >
     <Navbar bg="dark" variant="dark"   className="footer" >
     <Nav className="mr-auto">
-    <Nav.Link>This site is set up and running on AWS S3 Bucket - to test pipeline</Nav.Link>
+    <Nav.Link>This site is set up and running on AWS S3 Bucket</Nav.Link>
     </Nav>
     
     
