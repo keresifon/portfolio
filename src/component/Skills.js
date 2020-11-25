@@ -36,6 +36,7 @@ const Skills = () => (
         </Tree>
     <Tree content="DevOps" type={<span style={typeStyles}></span>}  >
         <Tree content="Version Control /GIT" style={{ color: 'white', align : 'justify'}} />
+        <Tree content="Buddy" style={{ color: 'white', align : 'justify'}} />
         <Tree content="Docker" style={{ color: 'white' }} />
         <Tree content="Heroku" style={{ color: 'white' }} />
         <Tree content="Netlify" style={{ color: 'white' }} />
