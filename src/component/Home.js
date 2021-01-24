@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 import ReactTextRotator from 'react-text-rotator';
-import { FaFacebook, FaTwitter, FaGithub, FaInstagram,FaAws } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaGithub, FaInstagram,FaAws, FaLinkedin } from 'react-icons/fa';
 import Content from '../component/Content';
 import { Animated } from 'react-animated-css';
 
@@ -55,6 +55,14 @@ function Home(props) {
 								className="p-3"
 							>
 								<FaAws className="h1  iconColor" />
+							</a>
+							<a
+								href="https://www.linkedin.com/in/keresifon-ekpenyong-baa58810"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-3"
+							>
+								<FaLinkedin className="h1  iconColor" />
 							</a>
 							<a
 								href="https://www.facebook.com/KwesiFBlack"
