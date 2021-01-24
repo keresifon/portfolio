@@ -4,7 +4,7 @@ import ReactTextRotator from 'react-text-rotator';
 import { FaFacebook, FaTwitter, FaGithub, FaInstagram,FaAws } from 'react-icons/fa';
 import Content from '../component/Content';
 import { Animated } from 'react-animated-css';
-import AWS from './AWS';
+
 
 function Home(props) {
 	const content = [
