@@ -20,7 +20,7 @@ function Portfolio(props) {
 							</Card.Text>
 							<Card.Text></Card.Text>
 						</Card.ImgOverlay>
-						<div class="overlay">
+						<div className="overlay">
 							<div className="text">
 								<Button
 									variant="outline-danger"
@@ -46,7 +46,7 @@ function Portfolio(props) {
 							<Card.Text>A Data collation site built with the MERN Stack</Card.Text>
 							<Card.Text></Card.Text>
 						</Card.ImgOverlay>
-						<div class="overlay">
+						<div className="overlay">
 							<div className="text">
 								<Button
 									variant="outline-danger"
@@ -75,7 +75,7 @@ function Portfolio(props) {
 							<Card.Text>A blog built with Gatsby</Card.Text>
 							<Card.Text></Card.Text>
 						</Card.ImgOverlay>
-						<div class="overlay">
+						<div className="overlay">
 							<div className="text">
 								<br></br>
 								<Button
@@ -102,7 +102,7 @@ function Portfolio(props) {
 							<Card.Text>Photography Website built with Gatsby</Card.Text>
 							<Card.Text></Card.Text>
 						</Card.ImgOverlay>
-						<div class="overlay">
+						<div className="overlay">
 							<div className="text">
 								<Button
 									variant="outline-danger"
