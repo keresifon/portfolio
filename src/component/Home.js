@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 import ReactTextRotator from 'react-text-rotator';
-import { FaFacebook, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaGithub, FaInstagram , FaAws} from 'react-icons/fa';
 import Content from '../component/Content';
 import { Animated } from 'react-animated-css';
 
@@ -46,6 +46,14 @@ function Home(props) {
 								className="p-3"
 							>
 								<FaGithub className="h1  iconColor" />
+							</a>
+							<a
+								href="https://www.youracclaim.com/badges/049a281e-e56f-496d-b199-21c428f303d0/public_url"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-3"
+							>
+								<FaAws className="h1  iconColor" />
 							</a>
 							<a
 								href="https://www.facebook.com/KwesiFBlack"
