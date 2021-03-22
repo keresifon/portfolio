@@ -3,6 +3,7 @@ import Experience from './Experience';
 import { Accordion, Card } from 'react-bootstrap'
 import Skills from './Skills';
 import Education from './Education';
+import Certification from './Certifications';
 
 function About(props) {
 	return (
@@ -41,7 +42,16 @@ function About(props) {
       <Card.Body><Education/></Card.Body>
     </Accordion.Collapse>
   </Card>
+  <Card>
+    <Accordion.Toggle as={Card.Header} eventKey="3">
+    => Certifications
+    </Accordion.Toggle>
+    <Accordion.Collapse eventKey="3">
+      <Card.Body><Certification/></Card.Body>
+    </Accordion.Collapse>
+  </Card>
 </Accordion>
+
         </div>
         
         
