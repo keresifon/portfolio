@@ -10,10 +10,7 @@ function Footer(props) {
     <Nav className="mr-auto">
     <Nav.Link>This site is set up and running on AWS Amplify</Nav.Link>
     </Nav>
-    <Nav className="ml-auto">
-    <a className= "alert" href="http://s3.keresifon.com">S3 Bucket Version</a> 
-
-    </Nav>
+    
     
     
   </Navbar>
