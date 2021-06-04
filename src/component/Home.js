@@ -1,10 +1,9 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 import ReactTextRotator from 'react-text-rotator';
-import { FaFacebook, FaTwitter, FaGithub, FaInstagram,FaAws, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaGithub, FaInstagram, FaAws, FaLinkedin } from 'react-icons/fa';
 import Content from '../component/Content';
 import { Animated } from 'react-animated-css';
-
 
 function Home(props) {
 	const content = [
@@ -65,6 +64,14 @@ function Home(props) {
 								<FaAws className="h1  iconColor" />
 							</a>
 							<a
+								href="https://www.youracclaim.com/badges/452904ce-d35a-441d-b4d6-e0285457c1fc"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-3"
+							>
+								<FaAws className="h1  iconColor" />
+							</a>
+							<a
 								href="https://www.linkedin.com/in/keresifon-ekpenyong-baa58810"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -97,11 +104,9 @@ function Home(props) {
 							>
 								<FaInstagram className="h1  iconColor" />
 							</a>
-
 						</div>
-						
 					</Animated>
-					
+
 					<Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={3000} isVisible={true}>
 						<div className=" ml-5 py-5">
 							<div className="welcome">Welcome</div>
