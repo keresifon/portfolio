@@ -35,7 +35,7 @@ const Skills = () => (
         <Tree content="REST API" style={{ color: 'white' }} />
         </Tree>
     <Tree content="DevOps" type={<span style={typeStyles}></span>}  >
-        <Tree content="Version Control /GIT" style={{ color: 'white', align : 'justify'}} />
+        <Tree content="GIT" style={{ color: 'white', align : 'justify'}} />
         <Tree content="Buddy" style={{ color: 'white', align : 'justify'}} />
         <Tree content="Docker" style={{ color: 'white' }} />
         <Tree content="Heroku" style={{ color: 'white' }} />
@@ -45,6 +45,7 @@ const Skills = () => (
         <Tree content="DNS, SSL" style={{ color: 'white' }} />
         <Tree content="Google Cloud Computing" style={{ color: 'white' }} />
         <Tree content="AWS" style={{ color: 'white' }} />
+        <Tree content="Terraform" style={{ color: 'white' }} />
         </Tree>
      <Tree content="Others" type={<span style={typeStyles}></span>}  >
         <Tree content="Data Analysis - Tableau , Metabase " style={{ color: 'white', align : 'justify'}} />
