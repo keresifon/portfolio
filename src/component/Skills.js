@@ -30,6 +30,7 @@ const Skills = () => (
     <Tree content="Backend" type={<span style={typeStyles}></span>}  >
         <Tree content="NodeJs" style={{ color: 'white', align : 'justify'}} />
         <Tree content="MongoDB" style={{ color: 'white' }} />
+        <Tree content="DynamoDB" style={{ color: 'white' }} />
         <Tree content="MySQL" style={{ color: 'white' }} />
         <Tree content="MSSQL" style={{ color: 'white' }} />
         <Tree content="REST API" style={{ color: 'white' }} />
