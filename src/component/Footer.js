@@ -8,7 +8,7 @@ function Footer(props) {
    <div  >
     <Navbar bg="dark" variant="dark"   className="footer" >
     <Nav className="mr-auto">
-    <Nav.Link>This site is set up and running on AWS Amplify</Nav.Link>
+    <Nav.Link></Nav.Link>
     </Nav>
     
     
