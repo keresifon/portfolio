@@ -8,6 +8,11 @@ import { Animated } from 'react-animated-css';
 function Home(props) {
 	const content = [
 		{
+			text: 'AWS.',
+			className: 'h1 text-center introRed',
+			animation: 'fade',
+		},
+		{
 			text: 'Full Stack Developer.',
 			className: 'h1 text-center introRed',
 			animation: 'fade',
@@ -22,11 +27,7 @@ function Home(props) {
 			className: 'h1 text-center introRed',
 			animation: 'fade',
 		},
-		{
-			text: 'AWS.',
-			className: 'h1 text-center introRed',
-			animation: 'fade',
-		},
+		
 		{
 			text: 'Photographer.',
 			className: 'h1 text-center introRed',
