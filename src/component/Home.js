@@ -48,30 +48,16 @@ function Home(props) {
 							>
 								<FaGithub className="h1  iconColor" />
 							</a>
+							
 							<a
-								href="https://www.youracclaim.com/badges/049a281e-e56f-496d-b199-21c428f303d0/public_url"
+								href="https://www.youracclaim.com/badges/888044e8-c135-4a32-b60d-43776e207433"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="p-3"
 							>
 								<FaAws className="h1  iconColor" />
 							</a>
-							<a
-								href="https://www.youracclaim.com/badges/90e41425-2b54-420c-aa0c-a8f87dc8740a"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="p-3"
-							>
-								<FaAws className="h1  iconColor" />
-							</a>
-							<a
-								href="https://www.youracclaim.com/badges/452904ce-d35a-441d-b4d6-e0285457c1fc"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="p-3"
-							>
-								<FaAws className="h1  iconColor" />
-							</a>
+							
 							<a
 								href="https://www.linkedin.com/in/keresifon-ekpenyong-baa58810"
 								target="_blank"
