@@ -50,7 +50,7 @@ function Home(props) {
 							</a>
 							
 							<a
-								href="https://www.youracclaim.com/badges/888044e8-c135-4a32-b60d-43776e207433"
+								href="https://www.credly.com/users/keresifon-ekpenyong/badges"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="p-3"
