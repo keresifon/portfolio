@@ -18,6 +18,8 @@ const typeStyles = {
 
 const Skills = () => (
   <div>
+    
+    <Tree content="Technical Skills" open style={treeStyles}>
     <Tree content="DevOps" type={<span style={typeStyles}></span>}>
       <Tree content="GIT" style={{ color: "white", align: "justify" }} />
       <Tree content="Buddy" style={{ color: "white", align: "justify" }} />
@@ -33,7 +35,6 @@ const Skills = () => (
       <Tree content="Terraform" style={{ color: "white" }} />
       <Tree content="Ansible" style={{ color: "white" }} />
     </Tree>
-    <Tree content="Technical Skills" open style={treeStyles}>
       <Tree content="Frontend" type={<span style={typeStyles}></span>}>
         <Tree content="HTML" style={{ color: "white", align: "justify" }} />
         <Tree content="CSS" style={{ color: "white" }} />
