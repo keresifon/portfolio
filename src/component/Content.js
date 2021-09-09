@@ -11,7 +11,8 @@ function Content(props) {
       <>
       
         
-        <div className="alert">
+        <div className="alert ">
+        
         
    
         <Tabs

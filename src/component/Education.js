@@ -20,10 +20,10 @@ const Education = () => (
     <div>
   <Tree content="Education"   open style={treeStyles}>
     <Tree content="University of Liverpool" type={<span style={typeStyles}></span>}  >
-        <Tree content="MSc. Information Systems Management" style={{ color: 'red', align : 'justify'}} />
+        <Tree content="MSc. Information Systems Management" style={{ color: 'white', align : 'justify'}} />
         </Tree>
     <Tree content="University of Nigeria, Nsukka" type={<span style={typeStyles}></span>}  >
-        <Tree content="Bachelors in Electronic Engineering" style={{ color: 'red', align : 'justify'}} />
+        <Tree content="Bachelors in Electronic Engineering" style={{ color: 'white', align : 'justify'}} />
         </Tree>
    
 
