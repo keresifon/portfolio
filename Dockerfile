@@ -9,4 +9,4 @@ RUN npm run build
 FROM nginx:1.17
 WORKDIR /usr/share/nginx/html  
 RUN rm -rf ./*
-COPY --from=builder /build /usr/share/nginx/html  
+COPY --from=builder /web/build /usr/share/nginx/html  
