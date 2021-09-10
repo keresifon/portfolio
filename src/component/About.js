@@ -11,7 +11,7 @@ function About(props) {
         <div className="alert border vh-80">
 		<div >
         A Software Engineer with 19+ years' experience building web applications. 
-        DevOps Engineer with Full Stack experience(backend and frontend)  
+        DevOps Engineer with Full Stack experience(backend and fron)  
         Led the design of the flagship educational product for Socketworks Limited. Joined as a web developer and over the years, rose to lead the company's technology team! A father of three adorable girls.
 
 		</div>
