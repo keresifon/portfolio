@@ -56,26 +56,17 @@ pipeline {
 
         } 
 
-        // stage('Cleaning up') { 
+        stage('Cleaning up') { 
 
-        //     steps { 
+            steps { 
 
-        //         sh "docker rmi $registry:$BUILD_NUMBER" 
+                sh "docker rmi $registry:$BUILD_NUMBER" 
 
-        //     }
-
-        // } 
-
-        stage('Orchestrate') {
-
-            steps {
-
-                   script {
-
-                       sh 'kubectl apply -f demo.yaml'
-               }
             }
-         }
+
+        } 
+
+        
 
     }
 
