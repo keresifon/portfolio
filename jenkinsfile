@@ -66,6 +66,16 @@ pipeline {
 
         } 
 
+        stage('Orchestrate') { 
+
+            steps { 
+
+                sh "kubectl apply -f p.yaml" 
+
+            }
+
+        } 
+
         
 
     }
