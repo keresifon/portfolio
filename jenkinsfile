@@ -70,7 +70,7 @@ pipeline {
 
             steps { 
 
-                sh "kubectl apply -f p.yaml" 
+                sh "kubectl apply -f p.yaml --token $TOKEN_FROM_WITH_CREDENTIALS" 
 
             }
 
