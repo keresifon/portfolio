@@ -70,7 +70,9 @@ pipeline {
 
             steps { 
 
-                sh "kubectl apply -f p.yaml" 
+                script {
+                     sh 'kubectl apply -f p.yaml'
+                 }
 
             }
 
