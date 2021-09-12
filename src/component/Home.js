@@ -30,7 +30,7 @@ function Home(props) {
       animation: "fade",
     },
     {
-      text: "ANN Stack.",
+      text: "Elaine Stack.",
       className: "h1 text-center introRed",
       animation: "fade",
     },
