@@ -9,8 +9,14 @@ pipeline {
         dockerImage = '' 
 
     }
+   
 
     agent any 
+
+     kubernetes {
+    cloud 'kubernetes'
+    namespace 'portfolio'
+  }
 
     stages { 
 
@@ -67,6 +73,7 @@ pipeline {
         } 
 
         stage('Orchestrate') { 
+        
 
             steps { 
 
