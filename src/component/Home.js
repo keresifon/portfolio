@@ -25,6 +25,11 @@ function Home(props) {
       animation: "fade",
     },
     {
+      text: "Docker, Kubernetes, Jenkins",
+      className: "h1 text-center introRed",
+      animation: "fade",
+    },
+    {
       text: "Full Stack Developer.",
       className: "h1 text-center introRed",
       animation: "fade",
