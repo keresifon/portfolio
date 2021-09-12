@@ -10,15 +10,10 @@ pipeline {
 
     }
    
-   agent {
-  kubernetes {
-    cloud 'kubernetes'
-    namespace 'portfolio'
-  }
-   }
+   
     agent any 
 
-     
+    
 
     stages { 
 
@@ -76,6 +71,10 @@ pipeline {
 
         stage('Orchestrate') { 
         
+         kubernetes {
+             cloud 'kubernetes'
+              namespace 'portfolio'
+          }
 
             steps { 
 
