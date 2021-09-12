@@ -29,7 +29,7 @@ spec:
       containers:
         - name: portfolio
           image: keresifon/jenkins-test:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           resources:
             requests:
               cpu: 100m
