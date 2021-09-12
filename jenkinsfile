@@ -10,13 +10,14 @@ pipeline {
 
     }
    
-
-    agent any 
-
-     kubernetes {
+   agent {
+  kubernetes {
     cloud 'kubernetes'
     namespace 'portfolio'
   }
+    agent any 
+
+     
 
     stages { 
 
