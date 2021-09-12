@@ -15,6 +15,7 @@ pipeline {
     cloud 'kubernetes'
     namespace 'portfolio'
   }
+   }
     agent any 
 
      
