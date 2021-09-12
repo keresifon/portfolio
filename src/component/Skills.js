@@ -26,6 +26,7 @@ const Skills = () => (
       <Tree content="Jenkins" style={{ color: "white", align: "justify" }} />
       <Tree content="Docker" style={{ color: "white" }} />
       <Tree content="Kubernetes" style={{ color: "white" }} />
+      <Tree content="Circle CI" style={{ color: "white" }} />
       <Tree content="Heroku" style={{ color: "white" }} />
       <Tree content="Netlify" style={{ color: "white" }} />
       <Tree content="Apache" style={{ color: "white" }} />
