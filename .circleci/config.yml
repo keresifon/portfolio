@@ -11,4 +11,5 @@ workflows:
             docker-password: DOCKER_PASSWORD 
             docker-username: DOCKER_USERNAME 
             dockerfile: Dockerfile 
+            tag: latest
             image: keresifon/circle-ci 
