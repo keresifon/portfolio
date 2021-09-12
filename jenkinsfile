@@ -75,10 +75,11 @@ pipeline {
 
             steps { 
 
-                   withCredentials(bindings: kubeconfig(credentialsId: 'Kubernetes', serverUrl: 'https://1fb7e70c-e9a5-4783-887d-c74d5ee5449c.k8s.ondigitalocean.com')) 
-               {
-                sh "kubectl apply -f p.yaml"
-                }
+               withKubeConfig([credentialsId: 'Kubernetes',
+                    serverUrl: 'https://1fb7e70c-e9a5-4783-887d-c74d5ee5449c.k8s.ondigitalocean.com'
+                    ]) {
+      sh 'kubectl apply -f p.yaml'
+    }
                      
                 
 
