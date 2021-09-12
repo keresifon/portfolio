@@ -30,7 +30,7 @@ function Home(props) {
       animation: "fade",
     },
     {
-      text: "MERN Stack.",
+      text: "ANN Stack.",
       className: "h1 text-center introRed",
       animation: "fade",
     },
