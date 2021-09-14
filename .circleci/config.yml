@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   docker: circleci/docker@1.7.0
+  k8s: digitalocean/k8s@0.1.1
 
 workflows:
     docker-build:
@@ -16,7 +17,7 @@ workflows:
 
     kubernetes-deploy:
       jobs:
-        - docker/pull:
+        - docker:
            image: keresifon/circle-ci:latest
     
         - k8s/initialize:
