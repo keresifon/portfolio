@@ -13,3 +13,15 @@ workflows:
             dockerfile: Dockerfile 
             tag: latest
             image: keresifon/circle-ci 
+
+    kubernetes-deploy:
+      jobs:
+        - docker:
+           image: keresifon/circle-ci:latest
+    
+        - k8s/initialize:
+              digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN 
+              cluster: portfolio 
+
+
+  
