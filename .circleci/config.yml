@@ -16,7 +16,7 @@ workflows:
 
     kubernetes-deploy:
       jobs:
-        - docker:
+        - docker/pull:
            image: keresifon/circle-ci:latest
     
         - k8s/initialize:
