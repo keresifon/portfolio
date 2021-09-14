@@ -17,12 +17,20 @@ workflows:
 
     kubernetes-deploy:
       jobs:
-        - docker-build:
-           image: keresifon/circle-ci:latest
-    
-        - k8s/initialize:
-              digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN 
-              cluster: portfolio 
+        - description: Initialize kubeconfig to connect to DigitalOcean Kubernetes Engine
+        - parameters:
+            cluster:
+              description: The Kubernetes cluster name.
+              type: string
+            digitalocean-access-token:
+              default: DIGITALOCEAN_ACCESS_TOKEN
+              description: The access token to connect DigitalOcean
+              #type: env_var_name
+        - steps:
+            doctl/initialize:
+            digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN
+            
+      
 
 
   
