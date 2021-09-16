@@ -16,7 +16,7 @@ workflows:
             tag: latest
             image: keresifon/circle-ci 
 
-        - checkout
+        
         - run:
             name: 
             environment:
