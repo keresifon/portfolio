@@ -3,11 +3,11 @@ version: 2.1
 orbs:
   docker: circleci/docker@1.7.0
   k8s: digitalocean/k8s@0.1.1
+  doctl: digitalocean/cli@0.1.1
 
 workflows:
     docker-build:
       jobs:
-        
         - docker/publish:
             lint-dockerfile: true 
             docker-password: DOCKER_PASSWORD 
@@ -15,19 +15,26 @@ workflows:
             dockerfile: Dockerfile 
             tag: latest
             image: keresifon/circle-ci 
+        - kuber:
+             requires:
+               - "docker/publish"
 
-    # kuber:
-    #   jobs:  
-    #     - run:
-    #         name: 
-    #         environment:
-    #           digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN  
-    #         command: kubectl delete -f p.yaml
 
-    
-        
-            
-      
 
+
+jobs:
+  kuber:
+    docker:
+      # replace with your preferred image
+      - image: keresifon/circle-ci:latest
+    steps:
+       - doctl/initialize:
+          digitalocean-access-token: DIGITAL_OCEAN_ACCESS_TOKEN 
+     
 
   
+     
+
+
+   
+
