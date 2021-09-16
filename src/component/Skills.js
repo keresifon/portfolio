@@ -30,7 +30,6 @@ const Skills = () => (
       <Tree content="Netlify" style={{ color: "white" }} />
       <Tree content="Apache" style={{ color: "white" }} />
       <Tree content="Nginx" style={{ color: "white" }} />
-      <Tree content="DNS, SSL" style={{ color: "white" }} />
       <Tree content="Google Cloud Computing" style={{ color: "white" }} />
       <Tree content="AWS" style={{ color: "white" }} />
       <Tree content="Terraform" style={{ color: "white" }} />
