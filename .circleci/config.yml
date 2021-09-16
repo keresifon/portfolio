@@ -16,14 +16,13 @@ workflows:
             tag: latest
             image: keresifon/circle-ci 
 
-        
-        - run:
-            name: 
-            environment:
-              digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN  
-            command: | 
-                  kubectl delete -f p.yaml
-                  kubectl apply -f p.yaml
+    # kuber:
+    #   jobs:  
+    #     - run:
+    #         name: 
+    #         environment:
+    #           digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN  
+    #         command: kubectl delete -f p.yaml
 
     
         
