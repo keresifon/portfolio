@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   docker: circleci/docker@1.7.0
   k8s: digitalocean/k8s@0.1.1
-  doctl: digitalocean/cli@0.1.1
+  
 
 workflows:
     docker-build:
@@ -28,13 +28,6 @@ jobs:
       # replace with your preferred image
       - image: keresifon/circle-ci:latest
     steps:
-       - doctl/initialize:
-          digitalocean-access-token: DIGITAL_OCEAN_ACCESS_TOKEN 
-     
-
-  
-     
-
-
-   
-
+       - k8s/initialize:
+          cluster: portfolio 
+          
