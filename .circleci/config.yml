@@ -3,7 +3,6 @@ version: 2.1
 orbs:
   docker: circleci/docker@1.7.0
   k8s: digitalocean/k8s@0.1.1
-  kubernetes: circleci/kubernetes@0.12.0
   
 
 workflows:
@@ -19,9 +18,7 @@ workflows:
         - kuber:
              requires:
                - "docker/publish"
-        - deploy:
-             requires:
-               - "kuber"
+        
 
 
 
@@ -36,14 +33,6 @@ jobs:
        - k8s/initialize:
           cluster: kere 
           digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN 
+       - run:
+          command: kubectl apply -f p.yaml
 
-
-  deploy:
-    docker:
-      # replace with your preferred image
-      - image: keresifon/circle-ci:latest
-    steps:
-      - kubernetes/create-or-update-resource:
-          action-type: apply 
-          resource-file-path: /p.yaml 
-          show-kubectl-command: true 
