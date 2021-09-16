@@ -11,7 +11,7 @@ spec:
   selector:
     matchLabels:
       app: portfolio
-  replicas: 1
+  replicas: 2
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -28,7 +28,7 @@ spec:
       # - Each init container must complete successfully before the next one starts.
       containers:
         - name: portfolio
-          image: keresifon/jenkins-test:latest
+          image: keresifon/circle-ci:latest
           imagePullPolicy: Always
           resources:
             requests:
