@@ -36,6 +36,8 @@ jobs:
           digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN 
        - run:
           command: | 
-              kubectl delete -f kubernetes/p.yaml
+              kubectl apply -f kubernetes/namespace.yaml
+              kubectl apply -f kubernetes/service.yaml
+              kubectl apply -f kubernetes/ingress.yaml
               kubectl apply -f kubernetes/deployment.yaml
 
