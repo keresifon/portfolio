@@ -34,5 +34,5 @@ jobs:
           cluster: kere 
           digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN 
        - run:
-          command: kubectl apply -f /p.yaml
+          command: kubectl get pods -n=portfolio
 
