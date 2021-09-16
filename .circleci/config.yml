@@ -29,6 +29,7 @@ jobs:
       # replace with your preferred image
       - image: keresifon/circle-ci:latest
     steps:
+       - checkout    
        - k8s/install
        - k8s/initialize:
           cluster: kere 
