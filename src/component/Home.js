@@ -40,6 +40,11 @@ function Home(props) {
       animation: "fade",
     },
     {
+      text: "Circle CI.",
+      className: "h1 text-center introRed",
+      animation: "fade",
+    },
+    {
       text: "Gatsby.",
       className: "h1 text-center introRed",
       animation: "fade",

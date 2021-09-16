@@ -35,7 +35,6 @@ jobs:
           cluster: kere 
           digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN 
        - run:
-          command: | 
-              kubectl delete -f p.yaml
+          command: |
               kubectl apply -f p.yaml
 
