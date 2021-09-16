@@ -28,6 +28,7 @@ jobs:
       # replace with your preferred image
       - image: keresifon/circle-ci:latest
     steps:
+       - k8s/install
        - k8s/initialize:
           cluster: portfolio 
-          
+          digitalocean-access-token: DIGITALOCEAN_ACCESS_TOKEN 
