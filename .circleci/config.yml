@@ -15,7 +15,7 @@ workflows:
             docker-username: DOCKER_USERNAME 
             dockerfile: Dockerfile 
             tag: latest
-            image: keresifon/gke:latest 
+            image: keresifon/gke
         - kuber:
              requires:
                - "docker/publish"
