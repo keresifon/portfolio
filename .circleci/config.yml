@@ -30,7 +30,8 @@ jobs:
       # replace with your preferred image
       - image: keresifon/gke:latest
     steps:
-      #  - checkout    
+      #  - checkout 
+       - gcp-gke/install   
        - gcp-gke/update-kubeconfig-with-credentials:
           cluster: devops 
           gcloud-service-key: GCLOUD_SERVICE_KEY 
