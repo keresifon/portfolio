@@ -31,6 +31,8 @@ jobs:
       - image: keresifon/gke:latest
     steps:
       #  - checkout 
+       - run:
+          command: apk update && apk add curl curl-dev bash
        - gcp-gke/install   
        - gcp-gke/update-kubeconfig-with-credentials:
           cluster: devops 

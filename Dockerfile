@@ -1,6 +1,5 @@
 
 FROM node:12-alpine AS builder
-RUN apk --no-cache add curl
 WORKDIR /web
 COPY package*.json /web/
 RUN npm install
