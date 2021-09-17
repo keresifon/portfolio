@@ -1,5 +1,5 @@
 
-FROM node:12-alpine AS builder
+FROM node:current-alpine3.11 AS builder
 WORKDIR /web
 COPY package*.json /web/
 RUN npm install
