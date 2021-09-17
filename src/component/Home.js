@@ -40,7 +40,7 @@ function Home(props) {
       animation: "fade",
     },
     {
-      text: "Circle CI.",
+      text: "Google Kubernetes.",
       className: "h1 text-center introRed",
       animation: "fade",
     },
