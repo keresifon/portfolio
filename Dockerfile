@@ -1,8 +1,8 @@
 
-FROM node:current-alpine3.11 AS builder
+FROM node:16-alpine AS builder
 WORKDIR /web
 COPY package*.json /web/
-RUN npm install -g npm@7.24.0
+RUN npm install
 COPY . .
 RUN npm run build
 
