@@ -8,16 +8,16 @@ orbs:
 workflows:
     docker-build:
       jobs:
-        - docker/publish:
-            lint-dockerfile: true 
-            docker-password: DOCKER_PASSWORD 
-            docker-username: DOCKER_USERNAME 
-            dockerfile: Dockerfile 
-            tag: latest
-            image: keresifon/gke
-        - kuber:
-             requires:
-               - "docker/publish"
+        # - docker/publish:
+        #     lint-dockerfile: true 
+        #     docker-password: DOCKER_PASSWORD 
+        #     docker-username: DOCKER_USERNAME 
+        #     dockerfile: Dockerfile 
+        #     tag: latest
+        #     image: keresifon/gke
+        - kuber
+            #  requires:
+            #    - "docker/publish"
         
 
 
@@ -30,9 +30,8 @@ jobs:
       - image: keresifon/gke:latest
     steps:
       #  - checkout 
-        
        - run:
-          command: sudo apt install curl
+          command:  apt install curl
        - gcp-cloud-run/init:
           gcloud-service-key: GCLOUD_SERVICE_KEY 
           google-compute-zone: GOOGLE_COMPUTE_ZONE 
