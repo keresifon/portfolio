@@ -4,6 +4,8 @@ kind: Ingress
 metadata:
   name: p-ingress
   namespace: portfolio
+  annotations:
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
     - host: gke.okpogho.com
