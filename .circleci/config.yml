@@ -46,8 +46,8 @@ jobs:
           perform-login: true 
       - run:
           command: | 
-              kubectl delete -f kubernetes/namespace.yaml
-              kubectl delete -f kubernetes/service.yaml
-              kubectl delete -f kubernetes/ingress.yaml
-              kubectl delete -f kubernetes/deployment.yaml
+              kubectl apply -f kubernetes/namespace.yaml
+              kubectl apply -f kubernetes/service.yaml
+              kubectl apply -f kubernetes/ingress.yaml
+              kubectl apply -f kubernetes/deployment.yaml
 
