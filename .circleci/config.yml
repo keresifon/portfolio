@@ -30,7 +30,7 @@ jobs:
       # replace with your preferred image
       - image: keresifon/gke:latest
     steps:
-      #  - checkout      
+      - checkout      
       - run:
           command: |
               apt-get update
