@@ -1,7 +1,7 @@
 
 FROM node:12-alpine AS builder
 RUN apk --no-cache add curl
-RUN curl -s https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-268.0.0-linux-x86_64.tar.gz | tar xz
+RUN curl google.com
 WORKDIR /web
 COPY package*.json /web/
 RUN npm install
