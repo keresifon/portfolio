@@ -9,19 +9,16 @@ orbs:
 workflows:
     docker-build:
       jobs:
-        # - docker/publish:
-        #     lint-dockerfile: true 
-        #     docker-password: DOCKER_PASSWORD 
-        #     docker-username: DOCKER_USERNAME 
-        #     dockerfile: Dockerfile 
-        #     tag: latest
-        #     image: keresifon/gke
-        - kuber
-            #  requires:
-            #    - "docker/publish"
-        
-
-
+        - docker/publish:
+            lint-dockerfile: true 
+            docker-password: DOCKER_PASSWORD 
+            docker-username: DOCKER_USERNAME 
+            dockerfile: Dockerfile 
+            tag: latest
+            image: keresifon/gke
+        - kuber:
+             requires:
+               - "docker/publish"
 
 
 jobs:
@@ -44,18 +41,18 @@ jobs:
           google-project-id: GOOGLE_PROJECT_ID 
           install-kubectl: true 
           perform-login: true 
-      # - run:
-      #     command: | 
-      #         kubectl apply -f kubernetes/namespace.yaml
-      #         kubectl apply -f kubernetes/service.yaml
-      #         kubectl apply -f kubernetes/ingress.yaml
-      #         kubectl apply -f kubernetes/deployment.yaml
       - run:
           command: | 
-              kubectl delete -f kubernetes/deployment.yaml
-              kubectl delete -f kubernetes/ingress.yaml
-              kubectl delete -f kubernetes/service.yaml
-              kubectl delete -f kubernetes/namespace.yaml
+              kubectl apply -f kubernetes/namespace.yaml
+              kubectl apply -f kubernetes/service.yaml
+              kubectl apply -f kubernetes/ingress.yaml
+              kubectl apply -f kubernetes/deployment.yaml
+      # - run:
+      #     command: | 
+      #         kubectl delete -f kubernetes/deployment.yaml
+      #         kubectl delete -f kubernetes/ingress.yaml
+      #         kubectl delete -f kubernetes/service.yaml
+      #         kubectl delete -f kubernetes/namespace.yaml
               
               
              
