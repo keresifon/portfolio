@@ -33,7 +33,7 @@ jobs:
       #  - checkout 
       #  - run:
       #     command: apk update && apk add curl curl-dev bash
-       - gcp-gke/install   
+      #  - gcp-gke/install   
        - gcp-gke/update-kubeconfig-with-credentials:
           cluster: devops 
           gcloud-service-key: GCLOUD_SERVICE_KEY 
