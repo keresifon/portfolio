@@ -28,7 +28,7 @@ spec:
       # - Each init container must complete successfully before the next one starts.
       containers:
         - name: portfolio
-          image: keresifon/circle-ci:latest
+          image: keresifon/gke:latest
           imagePullPolicy: Always
           resources:
             requests:
