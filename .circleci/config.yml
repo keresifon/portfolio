@@ -2,8 +2,7 @@ version: 2.1
 
 orbs:
   docker: circleci/docker@1.7.0
-  gcp-gke: circleci/gcp-gke@1.3.0
-  # k8s: digitalocean/k8s@0.1.1
+  gcp-cloud-run: circleci/gcp-cloud-run@1.0.2
   
 
 workflows:
@@ -32,13 +31,10 @@ jobs:
     steps:
       #  - checkout 
         
-       - gcp-gke/update-kubeconfig-with-credentials:
-          cluster: devops 
+       - gcp-cloud-run/init:
           gcloud-service-key: GCLOUD_SERVICE_KEY 
-          google-compute-region: GOOGLE_COMPUTE_REGION 
           google-compute-zone: GOOGLE_COMPUTE_ZONE 
           google-project-id: GOOGLE_PROJECT_ID 
-          install-kubectl: true 
       #  - run:
       #     command: | 
       #         kubectl apply -f kubernetes/namespace.yaml
