@@ -36,6 +36,7 @@ jobs:
               apt-get update
               apt-get -qq -y install curl
               apt-get install -y python
+              echo ${GCLOUD_SERVICE_KEY} | base64 --decode --ignore-garbage > $HOME/gcloud-service-key.json
       - gcp-gke/update-kubeconfig-with-credentials:
           cluster: devops 
           gcloud-service-key: GCLOUD_SERVICE_KEY 
