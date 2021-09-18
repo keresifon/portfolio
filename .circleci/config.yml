@@ -31,7 +31,9 @@ jobs:
     steps:
       #  - checkout 
        - run:
-          command:  apt install curl
+          command: |
+              apt-get update
+              apt install curl
        - gcp-cloud-run/init:
           gcloud-service-key: GCLOUD_SERVICE_KEY 
           google-compute-zone: GOOGLE_COMPUTE_ZONE 
