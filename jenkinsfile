@@ -7,6 +7,10 @@ pipeline {
         registryCredential = 'keresifon' 
 
         dockerImage = '' 
+        PROJECT_ID = 'arched-champion-325618'
+        CLUSTER_NAME = 'devops'
+        LOCATION = 'us-west1-a'
+        CREDENTIALS_ID = 'arched-champion-325618'
 
     }
    
@@ -73,17 +77,15 @@ pipeline {
         
        
 
-            steps { 
-
-               withKubeConfig([credentialsId: 'Kubernetes',
-                    serverUrl: 'https://1fb7e70c-e9a5-4783-887d-c74d5ee5449c.k8s.ondigitalocean.com'
-                    ]) {
-                        sh 'kubectl delete -f p.yaml'
-                        sh 'kubectl apply -f p.yaml'
-    }
-                     
-                
-
+            steps{
+                step([
+                $class: 'KubernetesEngineBuilder',
+                projectId: env.PROJECT_ID,
+                clusterName: env.CLUSTER_NAME,
+                location: env.LOCATION,
+                manifestPattern: 'kubernetes/',
+                credentialsId: env.CREDENTIALS_ID,
+                verifyDeployments: true])
             }
 
         } 
