@@ -99,6 +99,21 @@ metadata:
   name: prometheus-config
 
 ---
+kind: Service
+apiVersion: v1
+metadata:
+  name: prometheus
+spec:
+  selector:
+    app: prometheus
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 9090
+    targetPort: 9090
+    nodePort: 30909
+
+---
 
 apiVersion: apps/v1
 kind: Deployment
@@ -129,18 +144,4 @@ spec:
         configMap:
          name: prometheus-config  
 
----
 
-kind: Service
-apiVersion: v1
-metadata:
-  name: prometheus
-spec:
-  selector:
-    app: prometheus
-  type: LoadBalancer
-  ports:
-  - protocol: TCP
-    port: 9090
-    targetPort: 9090
-    nodePort: 30909
