@@ -54,7 +54,7 @@ jobs:
       #         kubectl delete -f kubernetes/ingress.yaml
       #         kubectl delete -f kubernetes/service.yaml
       #         kubectl delete -f kubernetes/namespace.yaml
-       - run:
+      - run:
           command: | 
               kubectl apply -f kubernetes/mnamespace.yaml
               kubectl apply -f kubernetes/prometheus.yaml
