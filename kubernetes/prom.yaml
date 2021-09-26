@@ -116,13 +116,13 @@ spec:
     spec:
       serviceAccountName: prometheus
       containers:
-       - name: prometheus
+      - name: prometheus
         image: prom/prometheus:v2.1.0
         ports:
-       - containerPort: 9090
+        - containerPort: 9090
           name: default
         volumeMounts:
-       - name: config-volume
+        - name: config-volume
           mountPath: /etc/prometheus
       volumes:
       - name: config-volume
