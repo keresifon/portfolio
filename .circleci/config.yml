@@ -57,7 +57,6 @@ jobs:
       - run:
           command: | 
               kubectl apply -f kubernetes/mnamespace.yaml
-              kubectl delete -f kubernetes/prom.yaml
               kubectl apply -f kubernetes/prom.yaml
              
               
