@@ -34,8 +34,7 @@ jobs:
             apt-get install -y gnupg
             curl -O https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
             bash ./get-helm-3 
-            apt-get update
-            apt-get install -y helm
+            
       - gcp-gke/update-kubeconfig-with-credentials:
           cluster: devops
           gcloud-service-key: GCLOUD_SERVICE_KEY
