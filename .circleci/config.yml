@@ -4,22 +4,20 @@ orbs:
   docker: circleci/docker@1.7.0
   gcp-gke: circleci/gcp-gke@1.3.0
   # k8s: digitalocean/k8s@0.1.1
-  
 
 workflows:
-    docker-build:
-      jobs:
-        - docker/publish:
-            lint-dockerfile: true 
-            docker-password: DOCKER_PASSWORD 
-            docker-username: DOCKER_USERNAME 
-            dockerfile: Dockerfile 
-            tag: latest
-            image: keresifon/gke
-        - kuber:
-             requires:
-               - "docker/publish"
-
+  docker-build:
+    jobs:
+      - docker/publish:
+          lint-dockerfile: true
+          docker-password: DOCKER_PASSWORD
+          docker-username: DOCKER_USERNAME
+          dockerfile: Dockerfile
+          tag: latest
+          image: keresifon/gke
+      - kuber:
+          requires:
+            - "docker/publish"
 
 jobs:
   kuber:
@@ -27,47 +25,41 @@ jobs:
       # replace with your preferred image
       - image: keresifon/gke:latest
     steps:
-      - checkout      
+      - checkout
       - run:
           command: |
-              apt-get update
-              apt-get -qq -y install curl
-              apt-get install -y python
-              apt-get install -y gnupg
-              curl https://baltocdn.com/helm/signing.asc | apt-key add -
-              apt-get install -y apt-transport-https 
-              echo "deb https://baltocdn.com/helm/stable/debian/ all main" |  tee /etc/apt/sources.list.d/helm-stable-debian.list
-              apt-get update
-              apt-get install -y helm
+            apt-get update
+            apt-get -qq -y install curl
+            apt-get install -y python
+            apt-get install -y gnupg
+            curl -O https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+            bash ./get-helm-3 
+            apt-get update
+            apt-get install -y helm
       - gcp-gke/update-kubeconfig-with-credentials:
-          cluster: devops 
-          gcloud-service-key: GCLOUD_SERVICE_KEY 
-          # google-compute-region: GOOGLE_COMPUTE_REGION 
-          google-compute-zone: GOOGLE_COMPUTE_ZONE 
-          google-project-id: GOOGLE_PROJECT_ID 
-          install-kubectl: true 
-          perform-login: true 
+          cluster: devops
+          gcloud-service-key: GCLOUD_SERVICE_KEY
+          # google-compute-region: GOOGLE_COMPUTE_REGION
+          google-compute-zone: GOOGLE_COMPUTE_ZONE
+          google-project-id: GOOGLE_PROJECT_ID
+          install-kubectl: true
+          perform-login: true
       # - run:
-      #     command: | 
+      #     command: |
       #         kubectl apply -f kubernetes/namespace.yaml
       #         kubectl apply -f kubernetes/service.yaml
       #         kubectl delete -f kubernetes/ingress.yaml
       #         kubectl apply -f kubernetes/ingress.yaml
       #         kubectl apply -f kubernetes/deployment.yaml
       # - run:
-      #     command: | 
+      #     command: |
       #         kubectl delete -f kubernetes/deployment.yaml
       #         kubectl delete -f kubernetes/ingress.yaml
       #         kubectl delete -f kubernetes/service.yaml
       #         kubectl delete -f kubernetes/namespace.yaml
       - run:
-          command: | 
-              helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-              helm repo add stable https://charts.helm.sh/stable
-              helm repo update
-              helm install prometheus prometheus-community/kube-prometheus-stack
-
-             
-              
-             
-
+          command: |
+            helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+            helm repo add stable https://charts.helm.sh/stable
+            helm repo update
+            helm install prometheus prometheus-community/kube-prometheus-stack
