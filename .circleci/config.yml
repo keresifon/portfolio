@@ -18,6 +18,9 @@ workflows:
       - aws
         # requires:
         #   - "docker/publish"
+      - eks:
+          requires:
+            - "aws"
 
 jobs:
   # kuber:
