@@ -9,16 +9,16 @@ orbs:
 workflows:
   docker-build:
     jobs:
-      - docker/publish:
-          lint-dockerfile: true
-          docker-password: DOCKER_PASSWORD
-          docker-username: DOCKER_USERNAME
-          dockerfile: Dockerfile
-          tag: latest
-          image: keresifon/eks
-      - aws:
-          requires:
-            - "docker/publish"
+      # - docker/publish:
+      #     lint-dockerfile: true
+      #     docker-password: DOCKER_PASSWORD
+      #     docker-username: DOCKER_USERNAME
+      #     dockerfile: Dockerfile
+      #     tag: latest
+      #     image: keresifon/eks
+      - aws
+          # requires:
+          #   - "docker/publish"
       
  
       
