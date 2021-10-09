@@ -1,10 +1,10 @@
 version: 2.1
 
 orbs:
+
   docker: circleci/docker@1.7.0
-  gcp-gke: circleci/gcp-gke@1.3.0
-  eks: tiendanube/eks@1.7.2
-  # k8s: digitalocean/k8s@0.1.1
+  aws-eks: frameio/aws-eks@0.24.0
+  
 
 workflows:
   docker-build:
@@ -19,15 +19,15 @@ workflows:
       - kuber:
           requires:
             - "docker/publish"
-      # - eks:
-      #     requires:
-      #       - "docker/publish"
+      - aws:
+         requires:
+           - "kuber"
+ 
       
 
 jobs:
   kuber:
     docker:
-      # replace with your preferred image
       - image: keresifon/eks:latest
     steps:
       - checkout
@@ -39,13 +39,14 @@ jobs:
             apt-get install -y gnupg
             curl -O https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
             bash ./get-helm-3
-      
-  eks:
+  aws:
     docker:
       - image: keresifon/eks:latest
     steps:
-       - eks/deploy:
-            steps: kubectl apply -f deployment.yml 
-            region: us-east-1 
-            cluster-name: portfolio-eks-ITFEs2sZ 
+      - checkout
+      - aws-eks/login:
+          cluster: portfolio-eks-ITFEs2sZ 
+          region: us-east-1 
+
+     
       
