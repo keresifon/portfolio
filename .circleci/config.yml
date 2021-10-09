@@ -1,10 +1,10 @@
 version: 2.1
 
 orbs:
+
   docker: circleci/docker@1.7.0
-  gcp-gke: circleci/gcp-gke@1.3.0
-  eks: tiendanube/eks@1.7.2
-  # k8s: digitalocean/k8s@0.1.1
+  aws-eks: circleci/aws-eks@1.1.0
+  
 
 workflows:
   docker-build:
@@ -16,36 +16,38 @@ workflows:
           dockerfile: Dockerfile
           tag: latest
           image: keresifon/eks
-      - kuber:
+      - aws:
           requires:
             - "docker/publish"
-      # - eks:
-      #     requires:
-      #       - "docker/publish"
+      
+ 
       
 
 jobs:
-  kuber:
+  # kuber:
+  #   docker:
+  #     - image: keresifon/eks:latest
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         command: |
+  #           apt-get update
+  #           apt-get -qq -y install curl
+  #           apt-get install -y python
+  #           apt-get install -y gnupg
+  #           curl -O https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+  #           bash ./get-helm-3
+  aws:
     docker:
-      # replace with your preferred image
       - image: keresifon/eks:latest
     steps:
       - checkout
-      - run:
-          command: |
-            apt-get update
-            apt-get -qq -y install curl
-            apt-get install -y python
-            apt-get install -y gnupg
-            curl -O https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-            bash ./get-helm-3
-      
-  eks:
-    docker:
-      - image: keresifon/eks:latest
-    steps:
-       - eks/deploy:
-            steps: kubectl apply -f deployment.yml 
-            region: us-east-1 
-            cluster-name: portfolio-eks-ITFEs2sZ 
+      - aws-eks/update-kubeconfig-with-authenticator:
+          install-kubectl: true 
+          cluster-name: portfolio-eks-ITFEs2sZ 
+          cluster-authentication-role-arn: arn:aws:iam::870899748481:user/kereawsd 
+          aws-profile: kereawsd 
+          aws-region: us-east-1 
+
+     
       
