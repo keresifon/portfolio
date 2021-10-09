@@ -48,7 +48,6 @@ jobs:
           install-kubectl: true 
           cluster-name: portfolio-eks-ITFEs2sZ 
           cluster-authentication-role-arn: arn:aws:iam::870899748481:user/kereawsd 
-          aws-profile: default 
           aws-region: us-east-1 
 
      
