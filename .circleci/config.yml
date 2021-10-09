@@ -29,19 +29,20 @@ jobs:
   #     - image: keresifon/eks:latest
   #   steps:
   #     - checkout
-  #     - run:
-  #         command: |
-  #           apt-get update
-  #           apt-get -qq -y install curl
-  #           apt-get install -y python
-  #           apt-get install -y gnupg
-  #           curl -O https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-  #           bash ./get-helm-3
+ 
   aws:
     docker:
       - image: keresifon/eks:latest
     steps:
       - checkout
+      - run:
+          command: |
+            apt-get update
+            apt-get -qq -y install curl
+            apt-get install -y python
+            apt-get install -y gnupg
+            curl -LO https://github.com/kubernetes/kops/releases/download/$KOPS_VERSION/kops-$PLATFORM-amd64
+            
       - aws-eks/update-kubeconfig-with-authenticator:
           install-kubectl: true 
           cluster-name: portfolio-eks-ITFEs2sZ 
