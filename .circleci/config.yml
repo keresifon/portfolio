@@ -14,9 +14,9 @@ workflows:
           dockerfile: Dockerfile
           tag: latest
           image: keresifon/eks
-      - eks
-      requires:
-        - "docker/publish"
+      - eks:
+          requires:
+             - "docker/publish"
      
 
 jobs:
