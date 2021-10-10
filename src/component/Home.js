@@ -40,7 +40,7 @@ function Home(props) {
       animation: "fade",
     },
     {
-      text: "Google Kubernetes.",
+      text: "AWS EKS",
       className: "h1 text-center introRed",
       animation: "fade",
     },

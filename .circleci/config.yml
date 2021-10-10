@@ -3,44 +3,24 @@ version: 2.1
 orbs:
   docker: circleci/docker@1.7.0
   aws-eks: circleci/aws-eks@1.1.0
-  aws-cli: circleci/aws-cli@2.0.3
-
+  
 workflows:
   docker-build:
     jobs:
-      # - docker/publish:
-      #     lint-dockerfile: true
-      #     docker-password: DOCKER_PASSWORD
-      #     docker-username: DOCKER_USERNAME
-      #     dockerfile: Dockerfile
-      #     tag: latest
-      #     image: keresifon/eks
-      # - aws
-      # requires:
-      #   - "docker/publish"
+      - docker/publish:
+          lint-dockerfile: true
+          docker-password: DOCKER_PASSWORD
+          docker-username: DOCKER_USERNAME
+          dockerfile: Dockerfile
+          tag: latest
+          image: keresifon/eks
       - eks
+      requires:
+        - "docker/publish"
+     
 
 jobs:
-  # kuber:
-  #   docker:
-  #     - image: keresifon/eks:latest
-  #   steps:
-  #     - checkout
-
-  # aws:
-  #   docker:
-  #     - image: keresifon/eks:latest
-  #   steps:
-  #     - checkout
-  #     - run:
-  #         command: |
-  #           apt-get update
-  #           apt-get -qq -y install curl
-  #           apt-get install -y unzip
-  #           curl -LO https://github.com/kubernetes/kops/releases/download/$KOPS_VERSION/kops-$PLATFORM-amd64
-  #       apt-get install -y python
-  #       apt-get install -y gnupg
-
+  
   eks:
     docker:
       - image: keresifon/eks:latest
