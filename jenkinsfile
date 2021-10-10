@@ -82,12 +82,7 @@ pipeline {
             steps{
                 step([
                 $class: 'AmazonWebServicesCredentialsBinding',
-                projectId: env.PROJECT_ID,
-                clusterName: env.CLUSTER_NAME,
-                location: env.LOCATION,
-                manifestPattern: 'kubernetes/deployment.yaml',
-                credentialsId: env.CREDENTIALS_ID,
-                verifyDeployments: false])
+                credentialsId: 'e1c77e8f-e4f1-4eba-9834-1ecf6008e52e'])
             }
 
         } 
