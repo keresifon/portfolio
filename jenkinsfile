@@ -1,4 +1,4 @@
-def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'e1c77e8f-e4f1-4eba-9834-1ecf6008e52e']]
+// def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'e1c77e8f-e4f1-4eba-9834-1ecf6008e52e']]
 
 pipeline { 
 
@@ -9,8 +9,7 @@ pipeline {
         registryCredential = 'keresifon' 
 
         dockerImage = '' 
-        AWS_REGION = 'us-east-1'
-        HOME = '.'
+        
 
     }
    
