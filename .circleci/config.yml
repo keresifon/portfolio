@@ -16,8 +16,8 @@ workflows:
       #     tag: latest
       #     image: keresifon/eks
       # - aws
-        # requires:
-        #   - "docker/publish"
+      # requires:
+      #   - "docker/publish"
       - eks
 
 jobs:
@@ -38,26 +38,30 @@ jobs:
   #           apt-get -qq -y install curl
   #           apt-get install -y unzip
   #           curl -LO https://github.com/kubernetes/kops/releases/download/$KOPS_VERSION/kops-$PLATFORM-amd64
-      #       apt-get install -y python
-      #       apt-get install -y gnupg
-      
-     
-          
+  #       apt-get install -y python
+  #       apt-get install -y gnupg
 
   eks:
     docker:
       - image: keresifon/eks:latest
     steps:
+      - checkout:
       - run:
           command: |
             apt-get update
             apt-get -qq -y install curl
             apt-get install -y unzip
             curl -LO https://github.com/kubernetes/kops/releases/download/$KOPS_VERSION/kops-$PLATFORM-amd64
-      - aws-eks/install-aws-iam-authenticator      
+      - aws-eks/install-aws-iam-authenticator
       # - aws-eks/install-eksctl
       - aws-eks/update-kubeconfig-with-authenticator:
           install-kubectl: true
           cluster-name: portfolio-fKYbvqcN
           cluster-authentication-role-arn: arn:aws:iam::870899748481:user/kereawsd
           aws-region: us-east-1
+      - run:
+          command: |
+            kubectl apply -f kubernetes/namespace.yaml
+            kubectl apply -f kubernetes/service.yaml
+            kubectl apply -f kubernetes/ingress.yaml
+            kubectl apply -f kubernetes/deployment.yaml
