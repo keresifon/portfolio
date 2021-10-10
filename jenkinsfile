@@ -1,3 +1,5 @@
+def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'e1c77e8f-e4f1-4eba-9834-1ecf6008e52e']]
+
 pipeline { 
 
     environment { 
@@ -7,10 +9,8 @@ pipeline {
         registryCredential = 'keresifon' 
 
         dockerImage = '' 
-        PROJECT_ID = 'arched-champion-325618'
-        CLUSTER_NAME = 'devops'
-        LOCATION = 'us-west1-a'
-        CREDENTIALS_ID = 'arched-champion-325618'
+        AWS_REGION = 'us-east-1'
+        HOME = '.'
 
     }
    
@@ -18,7 +18,7 @@ pipeline {
     agent any 
 
     parameters {
-    gitParameter branchFilter: 'origin/(.*)', defaultValue: 'gke', name: 'BRANCH', type: 'PT_BRANCH'
+    gitParameter branchFilter: 'origin/(.*)', defaultValue: 'eks', name: 'BRANCH', type: 'PT_BRANCH'
   }
 
     stages { 
@@ -81,7 +81,7 @@ pipeline {
 
             steps{
                 step([
-                $class: 'KubernetesEngineBuilder',
+                $class: 'AmazonWebServicesCredentialsBinding',
                 projectId: env.PROJECT_ID,
                 clusterName: env.CLUSTER_NAME,
                 location: env.LOCATION,
