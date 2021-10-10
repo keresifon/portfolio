@@ -14,6 +14,10 @@ The portfolio webite running off AWS Amplify
 
 A Circle CI Pipeline deploying the portfolio site on Kubernetes with Digital Ocean as Cloud Provider
 
+### `eks`
+
+A Circle CI Pipeline deploying the portfolio site on Kubernetes with AWS as Cloud Provider.
+
 ### `gke`
 
 A Circle CI Pipeline deploying the portfolio site on Kubernetes with Google Kubernetes Engine as Cloud Provider
