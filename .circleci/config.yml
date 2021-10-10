@@ -58,6 +58,6 @@ jobs:
       # - aws-eks/install-eksctl
       - aws-eks/update-kubeconfig-with-authenticator:
           install-kubectl: true
-          cluster-name: portfolio-eks-ITFEs2sZ
+          cluster-name: portfolio-fKYbvqcN
           cluster-authentication-role-arn: arn:aws:iam::870899748481:user/kereawsd
           aws-region: us-east-1
