@@ -45,7 +45,7 @@ jobs:
     docker:
       - image: keresifon/eks:latest
     steps:
-      - checkout:
+      - checkout
       - run:
           command: |
             apt-get update
