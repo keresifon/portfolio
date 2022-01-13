@@ -19,10 +19,13 @@ const typeStyles = {
 const Experience = () => (
     <div>
   <Tree content="Socketworks Limited"   open style={treeStyles}>
-    <Tree content="Head of Technology 2011 - Present" type={<span style={typeStyles}></span>}  >
+    <Tree content="Head of Technology 2011 - 2021" type={<span style={typeStyles}></span>}  >
         <Tree content="Accountable for defining technology vision for the organization" style={{ color: 'white', align : 'justify'}} />
         <Tree content="Liaising with the Business, UX and Marketing teams to drive brand" style={{ color: 'white' }} />
         <Tree content="Prioritising product requirements and implementing agile methodology to speed up delivery" style={{ color: 'white' }} />
+        <Tree content="Created and maintained automated CI/CD pipelines for code deployment using Jenkins" style={{ color: 'white' }} />
+        <Tree content="Provisioned immutable server architecture using Terraform for increased security" style={{ color: 'white' }} />
+        <Tree content="Used Jenkins to automate build and deployment that reduced human error and sped up production processes" style={{ color: 'white' }} />
         </Tree>
     <Tree content="Senior Technical Product Manager 2008 - 2011" type={<span style={typeStyles}></span>}  >
         <Tree content="Evaluated customer customization requests" style={{ color: 'white' }} />
