@@ -24,7 +24,7 @@ const Certification = () => (
 			</Tree>
 		<Tree content="AWS Certified SysOps Administrator – Associate" type={<span style={typeStyles}></span>}>
 				<Tree content="May 2021" style={{ color: 'white', align: 'justify' }} />
-			</Tree>
+			
 		</Tree>
 		<Tree content="AWS Certified Developer - Associate" type={<span style={typeStyles}></span>}>
 				<Tree content="March 2021" style={{ color: 'white', align: 'justify' }} />
@@ -32,7 +32,7 @@ const Certification = () => (
 			<Tree content="AWS Certified Solutions Architect - Associate" type={<span style={typeStyles}></span>}>
 				<Tree content="January 2021" style={{ color: 'white', align: 'justify' }} />
 			</Tree>
-			
+			</Tree>
      
 	</div>
 );
