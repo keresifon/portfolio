@@ -12,7 +12,7 @@ function About(props) {
 		<div >
         A Software Engineer with 15+ years' experience building web applications. 
         DevOps Engineer with Full Stack experience.  
-        Led the design of the flagship educational product for Socketworks Limited. Joined as a web developer and over the years, rose to lead the company's technology team! A father of three adorable girls.
+        A father of three adorable girls.
 
 		</div>
         <div>
