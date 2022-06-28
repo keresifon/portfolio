@@ -1,14 +1,11 @@
 pipeline {
   agent any
-  stages {
-    stage('Cloning our Git') {
-      agent any
-      steps {
-        script {
-          triggers {
+  triggers {
             cron('H */4 * * 1-5')
           }
-        }
+  stages {
+    stage('Cloning our Git') {
+      
 
         git 'https://github.com/keresifon/portfolio.git'
         script {
