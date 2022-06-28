@@ -4,7 +4,7 @@ pipeline {
     stage('Cloning our Git') {
       steps {
         git 'https://github.com/keresifon/portfolio.git'
-        readFile(file: 'build-config.json', encoding: 'JSON')
+        readFile(file: 'build-configs.json', encoding: 'JSON')
       }
     }
 
