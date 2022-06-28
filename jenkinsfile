@@ -20,7 +20,7 @@ node {
 
             
 
-              dockerImage = docker.build registry + ":latest" 
+              sh 'dockerImage = docker.build registry + ":latest"'
 
 
         
