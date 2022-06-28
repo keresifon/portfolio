@@ -20,7 +20,7 @@ node {
     stage('Building our image') { 
 
             
-
+              checkout scm
               sh 'dockerImage = docker.build registry + ":latest"'
 
 
