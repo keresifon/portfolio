@@ -46,8 +46,8 @@ pipeline {
             steps { 
 
                 script { 
-
-                    docker.withRegistry( '', registryCredential ) { 
+                    withDockerRegistry(credentialsId: 'Github')
+                     { 
 
                         dockerImage.push() 
 
