@@ -2,7 +2,8 @@
 
 // String buildConfigJSONFile = 'build-config.json'
 // LinkedHashMap buildConfigs = [:]
-
+def scmvars
+def image
 node {
     environment {
     registry = 'keresifon/jenkins-test'
@@ -19,7 +20,12 @@ node {
 
     stage('Building our image') { 
 
-            
+              image = docker.build("docker.build registry + ':latest'",
+              " --build-arg commit=${scmvars.GIT_COMMIT}"
+            + " --build-arg http_proxy=${env.http_proxy}"
+            + " --build-arg https_proxy=${env.https_proxy}"
+            + " --build-arg no_proxy=${env.no_proxy}"
+            + "Dockerfile")
              
               sh 'dockerImage = docker.build registry + ":latest"'
 
