@@ -1,32 +1,15 @@
-// def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'e1c77e8f-e4f1-4eba-9834-1ecf6008e52e']]
 
-pipeline { 
+String buildConfigJSONFile = 'build-config.json'
+LinkedHashMap buildConfigs = [:]
 
-    environment { 
-
-        registry = "keresifon/gke" 
-
-        registryCredential = 'keresifon' 
-
-        dockerImage = '' 
-        
-
-    }
-   
-   
-    agent any 
-
-    parameters {
-    gitParameter branchFilter: 'origin/(.*)', defaultValue: 'eks', name: 'BRANCH', type: 'PT_BRANCH'
-  }
-
-    stages { 
-
-        stage('Cloning our Git') { 
+node {
+    stage('Cloning our Git') { 
 
             steps { 
 
-                 git branch: "${params.BRANCH}", url: 'https://github.com/keresifon/portfolio.git' //git 'https://github.com/keresifon/portfolio.git' 
+                git 'https://github.com/keresifon/portfolio.git' 
+                
+                
 
             }
 
@@ -51,8 +34,8 @@ pipeline {
             steps { 
 
                 script { 
-
-                    docker.withRegistry( '', registryCredential ) { 
+                    withDockerRegistry(credentialsId: 'Github')
+                     { 
 
                         dockerImage.push() 
 
@@ -74,20 +57,9 @@ pipeline {
 
         } 
 
-        stage('Orchestrate') { 
-        
-       
-
-            steps{
-                step([
-                $class: 'AmazonWebServicesCredentialsBinding',
-                credentialsId: 'e1c77e8f-e4f1-4eba-9834-1ecf6008e52e'])
-            }
-
-        } 
-
-        
-
-    }
-
+    // if (currentBuild.currentResult == 'SUCCESS') {
+    //     stage('Deploy') {
+    //         sh 'make publish'
+    //     }
+    // }
 }
