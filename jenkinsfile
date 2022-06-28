@@ -5,19 +5,19 @@ LinkedHashMap buildConfigs = [:]
 node {
     stage('Cloning our Git') { 
 
-            steps { 
+           
 
                 git 'https://github.com/keresifon/portfolio.git' 
                 
                 
 
-            }
+            
 
         } 
 
         stage('Building our image') { 
 
-            steps { 
+            
 
                 script { 
 
@@ -25,13 +25,13 @@ node {
 
                 }
 
-            } 
+        
 
         }
 
         stage('Deploy our image') { 
 
-            steps { 
+         
 
                 script { 
                     withDockerRegistry(credentialsId: 'Github')
@@ -41,7 +41,7 @@ node {
 
                     }
 
-                } 
+          
 
             }
 
@@ -49,11 +49,11 @@ node {
 
         stage('Cleaning up') { 
 
-            steps { 
+            
 
                 sh "docker rmi $registry:latest" 
 
-            }
+            
 
         } 
 
