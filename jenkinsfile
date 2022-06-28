@@ -11,6 +11,12 @@ pipeline {
           buildConfigs = readJSON file: buildConfigJSONFile , returnPojo: true
         }
 
+        script {
+          triggers {
+            cron('H */4 * * 1-5')
+          }
+        }
+
       }
     }
 
