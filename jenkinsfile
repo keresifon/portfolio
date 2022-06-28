@@ -26,7 +26,8 @@ pipeline {
             steps { 
 
                 git 'https://github.com/keresifon/portfolio.git' 
-                buildConfigs = readJSON file: buildConfigJSONFile , returnPojo: true
+                
+                
 
             }
 
