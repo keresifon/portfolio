@@ -7,7 +7,7 @@ node {
 
            
 
-                git 'https://github.com/keresifon/portfolio.git' 
+               sh"git 'https://github.com/keresifon/portfolio.git' "
                 
                 
 
