@@ -20,8 +20,8 @@ node {
     stage('Building our image') { 
 
             
-            sh 'docker run  -p8082:8082 jenkins/jenkins:lts' 
-            sh 'dockerImage = docker.build registry + ":latest"'
+             
+              sh 'dockerImage = docker.build registry + ":latest"'
 
 
         
