@@ -4,6 +4,11 @@
 // LinkedHashMap buildConfigs = [:]
 
 node {
+    environment {
+    registry = 'keresifon/jenkins-test'
+    registryCredential = 'keresifon'
+    dockerImage = ''
+  }
     stage('Cloning our Git') { 
 
           checkout scm
