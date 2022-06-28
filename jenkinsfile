@@ -1,3 +1,7 @@
+
+String buildConfigJSONFile = 'build-config.json'
+LinkedHashMap buildConfigs = [:]
+
 pipeline { 
 
     environment { 
@@ -22,6 +26,7 @@ pipeline {
             steps { 
 
                 git 'https://github.com/keresifon/portfolio.git' 
+                buildConfigs = readJSON file: buildConfigJSONFile , returnPojo: true
 
             }
 
@@ -76,3 +81,4 @@ pipeline {
     }
 
 }
+
