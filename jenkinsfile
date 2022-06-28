@@ -1,3 +1,5 @@
+@Library('libjenkins2@2.49.3')
+import org.jenkinsci.plugins.workflow.steps.FlowInterruptException
 
 // String buildConfigJSONFile = 'build-config.json'
 // LinkedHashMap buildConfigs = [:]
