@@ -19,7 +19,7 @@ node {
         } 
 
     stage('Building our image') { 
-
+              checkout scm
               image = docker.build("docker.build registry + ':latest'",
               " --build-arg commit=${scmvars.GIT_COMMIT}"
             + " --build-arg http_proxy=${env.http_proxy}"
