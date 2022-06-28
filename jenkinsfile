@@ -7,7 +7,7 @@ import org.jenkinsci.plugins.workflow.steps.FlowInterruptException
 node {
     stage('Cloning our Git') { 
 
-          def scmVars = checkout scm
+          checkout scm
               // sh"git 'https://github.com/keresifon/portfolio.git' "
           
         } 
