@@ -7,24 +7,17 @@ import org.jenkinsci.plugins.workflow.steps.FlowInterruptException
 node {
     stage('Cloning our Git') { 
 
-           
-
+          
                sh"git 'https://github.com/keresifon/portfolio.git' "
-                
-
-            
-
+          
         } 
 
-        stage('Building our image') { 
+    stage('Building our image') { 
 
             
 
-                script { 
+              sh" dockerImage = docker.build registry + ":latest" "
 
-                    dockerImage = docker.build registry + ":latest" 
-
-                }
 
         
 
