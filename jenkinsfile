@@ -3,6 +3,7 @@
 // String buildConfigJSONFile = 'build-config.json'
 // LinkedHashMap buildConfigs = [:]
 @Library('libjenkins2@2.49.3')
+import org.jenkinsci.plugins.workflow.steps.FlowInterruptedException
 
 String registry = 'keresifon/jenkins-test'
 String registryCredential = 'keresifon'
