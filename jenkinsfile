@@ -34,7 +34,7 @@ node (linuxAgent){
 
 withDockerRegistry(credentialsId: 'Github') {
     // dockerImage.push() 
-    sh 'docker push dockerImage'
+    docker push dockerImage
 }
 
                         
