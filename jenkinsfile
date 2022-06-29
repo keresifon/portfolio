@@ -20,8 +20,11 @@ node {
     stage('Building our image') { 
 
         //    sh 'docker build -f Dockerfile -t keresifon/jenkins-test:latest'
-
-              sh 'dockerImage = docker.build registry + ":latest"'
+          withEnv (
+     registry = 'keresifon/jenkins-test'){
+sh 'dockerImage = docker.build registry + ":latest"'
+     }
+              
 
 
         
