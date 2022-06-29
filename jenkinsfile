@@ -1,7 +1,7 @@
 
 
-// String buildConfigJSONFile = 'build-config.json'
-// LinkedHashMap buildConfigs = [:]
+String buildConfigJSONFile = 'build-config.json'
+LinkedHashMap buildConfigs = [:]
 
 
 String registry = 'keresifon/jenkins-test'
@@ -12,10 +12,12 @@ String credentialsId = 'Github'
 
 node (linuxAgent){
     
+   
+
     stage('Cloning our Git') { 
 
           checkout scm
-              // sh"git 'https://github.com/keresifon/portfolio.git' "
+          buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
           
         } 
 
