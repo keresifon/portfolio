@@ -23,15 +23,18 @@ node (linuxAgent){
 
         
                   dockerImage = docker.build registry + ":latest"
-                   dockerImage.push() 
+                  
+
  
         }
 
         stage('Deploy our image') { 
 
+withDockerRegistry(credentialsId: 'Github') {
+    dockerImage.push() 
+}
 
-
-                        dockerImage.push() 
+                        
 
 
         } 
