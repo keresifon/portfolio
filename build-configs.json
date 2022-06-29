@@ -1,3 +1,4 @@
 {
-    "nightlyBuildsEnabledBranches" :["eks"]
+    "nightlyBuildsEnabledBranches" :["eks"],
+    "version":"latest"
 }
