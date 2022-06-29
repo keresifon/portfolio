@@ -25,7 +25,7 @@ node (linuxAgent){
     stage('Building our image') { 
 
         
-sh 'dockerImage = docker.build registry + ":latest"'
+dockerImage = docker.build registry + ":latest"
      
               
 
