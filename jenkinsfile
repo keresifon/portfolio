@@ -2,6 +2,7 @@
 
 // String buildConfigJSONFile = 'build-config.json'
 // LinkedHashMap buildConfigs = [:]
+@Library('libjenkins2@2.49.3')
 
 String registry = 'keresifon/jenkins-test'
 String registryCredential = 'keresifon'
