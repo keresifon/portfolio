@@ -46,7 +46,7 @@ withDockerRegistry(credentialsId: 'Github') {
 
             
 
-                sh "docker rmi $registry:latest" 
+                sh "docker rmi $registry:${buildConfigs.version}" 
 
         
 
