@@ -4,7 +4,7 @@
 // LinkedHashMap buildConfigs = [:]
 
 node {
-    environment {
+    withEnv {
     registry = 'keresifon/jenkins-test'
     registryCredential = 'keresifon'
     dockerImage = ''
