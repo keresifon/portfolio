@@ -8,7 +8,7 @@ node {
     registry = 'keresifon/jenkins-test'
     registryCredential = 'keresifon'
     dockerImage = ''
-    // withDockerRegistry(credentialsId: 'Github')
+     withDockerRegistry(credentialsId: 'Github')
     ) {
     stage('Cloning our Git') { 
 
