@@ -38,7 +38,7 @@ dockerImage = docker.build registry + ":latest"
 
          
 
-                script { 
+               
                     withDockerRegistry(credentialsId: 'Github')
                      { 
 
@@ -48,7 +48,7 @@ dockerImage = docker.build registry + ":latest"
 
           
 
-            }
+            
 
         } 
 
