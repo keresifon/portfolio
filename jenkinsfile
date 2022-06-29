@@ -1,6 +1,6 @@
 
 
-String buildConfigJSONFile = 'build-config.json'
+String buildConfigJSONFile = 'build-configs.json'
 LinkedHashMap buildConfigs = [:]
 
 
