@@ -3,6 +3,9 @@
 // String buildConfigJSONFile = 'build-config.json'
 // LinkedHashMap buildConfigs = [:]
 
+String registry = 'keresifon/jenkins-test'
+String registryCredential = 'keresifon'
+String dockerImage = ''
 node {
     // withEnv (
     // registry = 'keresifon/jenkins-test'
@@ -19,11 +22,9 @@ node {
 
     stage('Building our image') { 
 
-        //    sh 'docker build -f Dockerfile -t keresifon/jenkins-test:latest'
-          withEnv (
-     registry = 'keresifon/jenkins-test'){
+        
 sh 'dockerImage = docker.build registry + ":latest"'
-     }
+     
               
 
 
