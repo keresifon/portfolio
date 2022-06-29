@@ -6,7 +6,7 @@ LinkedHashMap buildConfigs = [:]
 
 String registry = 'keresifon/jenkins-test'
 String registryCredential = 'keresifon'
-String dockerImage = ''
+String dockerImage = null
 String linuxAgent = 'node'
 String credentialsId = 'Github'
 
