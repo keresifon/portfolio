@@ -4,12 +4,12 @@
 // LinkedHashMap buildConfigs = [:]
 
 node {
-    withEnv {
+    withEnv (
     registry = 'keresifon/jenkins-test'
     registryCredential = 'keresifon'
     dockerImage = ''
     // withDockerRegistry(credentialsId: 'Github')
-  }
+    ) {
     stage('Cloning our Git') { 
 
           checkout scm
@@ -55,7 +55,7 @@ node {
         
 
         } 
-
+}
     // if (currentBuild.currentResult == 'SUCCESS') {
     //     stage('Deploy') {
     //         sh 'make publish'
