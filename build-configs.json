@@ -1,4 +1,4 @@
 {
     "nightlyBuildsEnabledBranches" :["eks"],
-    "version":"latest"
+    "version":"v2"
 }
