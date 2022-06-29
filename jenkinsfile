@@ -26,7 +26,7 @@ node (linuxAgent){
         
                   dockerImage = docker.build registry + ":${buildConfigs.version}"
                   
-       println "${dockerImage}"
+       println "This is ${dockerImage}"
  
         }
 
@@ -34,7 +34,7 @@ node (linuxAgent){
 
 withDockerRegistry(credentialsId: 'Github') {
     // dockerImage.push() 
-    println "${dockerImage}"
+    println "This is ${dockerImage}"
 }
 
                         
