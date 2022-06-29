@@ -6,7 +6,9 @@
 String registry = 'keresifon/jenkins-test'
 String registryCredential = 'keresifon'
 String dockerImage = ''
-node {
+String linuxAgent = 'node'
+
+node (linuxAgent){
     // withEnv (
     // registry = 'keresifon/jenkins-test'
     // registryCredential = 'keresifon'
