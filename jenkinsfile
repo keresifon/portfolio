@@ -4,7 +4,7 @@ String buildConfigJSONFile = 'build-configs.json'
 LinkedHashMap buildConfigs = [:]
 
 
-String registry = 'keresifon/jenkins-test'
+String registry = 'keresifon/jenkins'
 String registryCredential = 'keresifon'
 String dockerImage = null
 String linuxAgent = 'node'
