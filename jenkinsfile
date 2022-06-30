@@ -9,7 +9,7 @@ String registryCredential = 'keresifon'
 String dockerImage = null
 String linuxAgent = 'node'
 String credentialsId = 'Github'
- String cronConfig = 'H/3 * * * *'
+ String cronConfig = 'H/8 * * * *'
 
 node (linuxAgent){
 
