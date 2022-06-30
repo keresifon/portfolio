@@ -9,13 +9,14 @@ String registryCredential = 'keresifon'
 String dockerImage = null
 String linuxAgent = 'node'
 String credentialsId = 'Github'
+String cronConfig = 'H/3 * * * *'
 
 node (linuxAgent){
 
    buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true  
 
   if(buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
-        String cronConfig = 'H/3 * * * *'
+        
         properties([pipelineTriggers([cron(cronConfig)])])
    }
 
