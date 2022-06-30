@@ -12,18 +12,19 @@ String credentialsId = 'Github'
 
 node (linuxAgent){
     
-   if(buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
-        String cronConfig = 'H 7 * * 1-5'
-        properties([pipelineTriggers([cron(cronConfig)])])
-   }
-
-   else { println "This didn't work"}
+  
 
     stage('Cloning our Git') { 
 
           checkout scm
           buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
           
+           if(buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
+        String cronConfig = 'H 7 * * 1-5'
+        properties([pipelineTriggers([cron(cronConfig)])])
+   }
+
+   else { println "This didn't work"}
           
         } 
 
