@@ -1,66 +1,45 @@
 
-
 String buildConfigJSONFile = 'build-configs.json'
 LinkedHashMap buildConfigs = [:]
-
 
 String registry = 'keresifon/jenkins'
 String registryCredential = 'keresifon'
 String dockerImage = null
 String linuxAgent = 'node'
 String credentialsId = 'Github'
- String cronConfig = 'H 7 * * 1-5'
+String cronConfig = 'H 1 * * 1-5'
 
-node (linuxAgent){
+node (linuxAgent) {
+   //buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
 
-   //buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true  
+        stage('Cloning our Git') {
+                checkout scm
+                buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
 
-  
+                if (buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
+                        properties([pipelineTriggers([cron(cronConfig)])])
+                }
 
-    stage('Cloning our Git') { 
-
-          checkout scm
-          buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
-          
-           if(buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
-       
-        properties([pipelineTriggers([cron(cronConfig)])])
-   }
-
-   else { println "This didn't work"}
-          
-        } 
-
-    stage('Building our image') { 
-
-        
-                  dockerImage = docker.build registry + ":${env.BUILD_NUMBER}"
-                
-                
- 
+                        else { println "This didn't work" }
         }
 
-        stage('Deploy our image') { 
+        stage('Building our image') {
 
-withDockerRegistry(credentialsId: 'Github') {
-    // dockerImage.push() 
-     sh "docker push $registry:${env.BUILD_NUMBER}" 
+                dockerImage = docker.build registry + ":${env.BUILD_NUMBER}"
 
-}
+        }
 
-                        
+        stage('Deploy our image') {
+                withDockerRegistry(credentialsId: 'Github') {
+                        // dockerImage.push()
+                        sh "docker push $registry:${env.BUILD_NUMBER}"
+                }
 
+        }
 
-        } 
+        stage('Cleaning up') {
 
-        stage('Cleaning up') { 
+                sh "docker rmi $registry:${env.BUILD_NUMBER}"
 
-            
-
-                sh "docker rmi $registry:${env.BUILD_NUMBER}" 
-
-        
-
-        } 
-
+        }
 }
