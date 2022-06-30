@@ -20,7 +20,7 @@ node (linuxAgent){
           buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
           
            if(buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
-        String cronConfig = 'H 7 * * 1-5'
+        String cronConfig = 'H/5 * * * 1-5'
         properties([pipelineTriggers([cron(cronConfig)])])
    }
 
