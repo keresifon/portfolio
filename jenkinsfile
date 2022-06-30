@@ -12,7 +12,10 @@ String credentialsId = 'Github'
 
 node (linuxAgent){
     
-   
+   if(buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
+        String cronConfig = 'H 7 * * 1-5'
+        properties([pipelineTriggers([cron(cronConfig)])])
+   }
 
     stage('Cloning our Git') { 
 
