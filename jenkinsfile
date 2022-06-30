@@ -17,6 +17,8 @@ node (linuxAgent){
         properties([pipelineTriggers([cron(cronConfig)])])
    }
 
+   else { println "This didn't work"}
+
     stage('Cloning our Git') { 
 
           checkout scm
