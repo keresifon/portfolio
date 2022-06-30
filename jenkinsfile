@@ -24,7 +24,7 @@ node (linuxAgent){
     stage('Building our image') { 
 
         
-                  dockerImage = docker.build registry + ":${buildConfigs.version}"
+                  dockerImage = docker.build registry + ":${env.BUILD_NUMBER}"
                 
                 
  
@@ -34,7 +34,7 @@ node (linuxAgent){
 
 withDockerRegistry(credentialsId: 'Github') {
     // dockerImage.push() 
-     sh "docker push $registry:${buildConfigs.version}" 
+     sh "docker push $registry:${env.BUILD_NUMBER}" 
 
 }
 
@@ -47,7 +47,7 @@ withDockerRegistry(credentialsId: 'Github') {
 
             
 
-                sh "docker rmi $registry:${buildConfigs.version}" 
+                sh "docker rmi $registry:${env.BUILD_NUMBER}" 
 
         
 
