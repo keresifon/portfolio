@@ -25,6 +25,8 @@ node (linuxAgent){
 
         
                   dockerImage = docker.build registry + ":${buildConfigs.version}"
+                
+                println registry + ":${buildConfigs.version}"
                   
        println "This is ${dockerImage}"
  
