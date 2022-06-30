@@ -34,7 +34,7 @@ node (linuxAgent){
 
 withDockerRegistry(credentialsId: 'Github') {
     // dockerImage.push() 
-     sh "docker push $registry:${buildConfigs.version}" 
+     docker.push registry + ":${buildConfigs.version}" 
 
 }
 
