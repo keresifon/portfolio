@@ -24,6 +24,7 @@ node (linuxAgent){
           checkout scm
           buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
           println "The branch is ${env.BRANCH_NAME}"
+          println "The branch is ${buildConfigs.nightlyBuildsEnabledBranches}"
           
         } 
 
