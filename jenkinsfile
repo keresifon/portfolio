@@ -13,9 +13,16 @@ String credentialsId = 'Github'
 
 node (linuxAgent){
 
-   buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true  
+   //buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true  
 
-  if(buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
+  
+
+    stage('Cloning our Git') { 
+
+          checkout scm
+          buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
+          
+           if(buildConfigs.nightlyBuildsEnabledBranches.contains(env.BRANCH_NAME)) {
        
         properties([pipelineTriggers([cron(cronConfig)])])
    }
@@ -23,13 +30,6 @@ node (linuxAgent){
    else { println "This didn't work"}
           
         } 
-
-    stage('Cloning our Git') { 
-
-          checkout scm
-          buildConfigs = readJSON file:buildConfigJSONFile, returnPojo: true
-          
-           
 
     stage('Building our image') { 
 
