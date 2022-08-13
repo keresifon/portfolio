@@ -8,5 +8,5 @@ RUN npm run build
 
 FROM nginxinc/nginx-unprivileged
 WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
+#RUN rm -rf ./*
 COPY --from=builder /web/build /usr/share/nginx/html
