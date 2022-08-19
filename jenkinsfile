@@ -51,4 +51,4 @@ pipeline {
     registryCredential = 'keresifon'
     dockerImage = ''
   }
-}
+
