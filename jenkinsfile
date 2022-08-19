@@ -12,13 +12,7 @@ pipeline {
       steps {
 
         git 'https://github.com/keresifon/portfolio.git'
-        script {
-          String buildConfigJSONFile = 'build-configs.json'
-          LinkedHashMap buildConfigs = [:]
-
-          buildConfigs = readJSON file: buildConfigJSONFile , returnPojo: true
-        }
-
+    
       }
     }
 
