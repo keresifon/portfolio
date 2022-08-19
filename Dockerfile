@@ -2,7 +2,7 @@
 FROM node:12-alpine AS builder
 WORKDIR /web
 COPY package*.json /web/
-RUN RUN npm install --legacy-peer-deps
+RUN npm install --legacy-peer-deps
 COPY . .
 RUN npm run build
 
