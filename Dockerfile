@@ -6,7 +6,7 @@ RUN RUN npm install --legacy-peer-deps
 COPY . .
 RUN npm run build
 
-FROM nginx:1.17
+FROM nginxinc/nginx-unprivileged
 WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
+#RUN rm -rf ./*
 COPY --from=builder /web/build /usr/share/nginx/html
