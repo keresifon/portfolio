@@ -84,7 +84,7 @@ function Portfolio(props) {
 			  A blog built with Gatsby
               </p>
               <a
-                href="https://ecom.keresifon.com"
+                href="https://akisok.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-danger"

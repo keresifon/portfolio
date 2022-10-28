@@ -26,15 +26,19 @@ const Skills = () => (
       <Tree content="Jenkins" style={{ color: "white", align: "justify" }} />
       <Tree content="Docker" style={{ color: "white" }} />
       <Tree content="Kubernetes" style={{ color: "white" }} />
+      <Tree content="Circle CI" style={{ color: "white" }} />
       <Tree content="Heroku" style={{ color: "white" }} />
       <Tree content="Netlify" style={{ color: "white" }} />
       <Tree content="Apache" style={{ color: "white" }} />
       <Tree content="Nginx" style={{ color: "white" }} />
-      <Tree content="DNS, SSL" style={{ color: "white" }} />
       <Tree content="Google Cloud Computing" style={{ color: "white" }} />
       <Tree content="AWS" style={{ color: "white" }} />
       <Tree content="Terraform" style={{ color: "white" }} />
       <Tree content="Ansible" style={{ color: "white" }} />
+      <Tree content="GitLab CI" style={{ color: "white" }} />
+      <Tree content="Prometheus" style={{ color: "white" }} />
+      <Tree content="Grafana" style={{ color: "white" }} />
+      <Tree content="CloudWatch" style={{ color: "white" }} />
     </Tree>
       <Tree content="Frontend" type={<span style={typeStyles}></span>}>
         <Tree content="HTML" style={{ color: "white", align: "justify" }} />
@@ -43,6 +47,8 @@ const Skills = () => (
         <Tree content="React" style={{ color: "white" }} />
         <Tree content="Bootstrap" style={{ color: "white" }} />
         <Tree content="Gatsby" style={{ color: "white" }} />
+        <Tree content="REST" style={{ color: "white" }} />
+        <Tree content="GraphQL" style={{ color: "white" }} />
       </Tree>
       <Tree content="Backend" type={<span style={typeStyles}></span>}>
         <Tree content="NodeJs" style={{ color: "white", align: "justify" }} />
@@ -60,10 +66,6 @@ const Skills = () => (
         />
         <Tree
           content="Helpdesk - Zoho Desk, JIRA "
-          style={{ color: "white" }}
-        />
-        <Tree
-          content="Document Mangement - Alfresco "
           style={{ color: "white" }}
         />
         <Tree content="ERP - erpnext " style={{ color: "white" }} />
