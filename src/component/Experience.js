@@ -18,8 +18,24 @@ const typeStyles = {
 
 const Experience = () => (
     <div>
+  <Tree content="IBM "   open style={treeStyles}>
+    <Tree content="Application Developer 2023 - Present" type={<span style={typeStyles}></span>}  >
+        <Tree content="Managed Amazon EKS clusters, ensuring stability and minimizing downtime." style={{ color: 'white', align : 'justify'}} />
+        <Tree content="Automated deployments using Ansible, reducing errors and operational costs." style={{ color: 'white' }} />
+        <Tree content="Resolved Kubernetes and Docker issues, maintaining high service availability." style={{ color: 'white' }} />
+        </Tree>
+   
+    </Tree>
+  <Tree content="Sentaca, an IBM Company "   open style={treeStyles}>
+    <Tree content="Senior DevOps Engineer 2022 - 2023" type={<span style={typeStyles}></span>}  >
+        <Tree content="Provided expert consultation in Build-Release Engineering to optimize CI/CD pipelines for clients." style={{ color: 'white', align : 'justify'}} />
+        <Tree content="Redesigned CI/CD workflows for better scalability and efficiency tailored to client needs" style={{ color: 'white' }} />
+        <Tree content="Advised running Jenkins on Kubernetes, detailing implementation steps and expected gains" style={{ color: 'white' }} />
+        </Tree>
+   
+    </Tree>
   <Tree content="Socketworks Limited"   open style={treeStyles}>
-    <Tree content="Head of Technology 2011 - Present" type={<span style={typeStyles}></span>}  >
+    <Tree content="Head of Technology 2011 - 2021" type={<span style={typeStyles}></span>}  >
         <Tree content="Accountable for defining technology vision for the organization" style={{ color: 'white', align : 'justify'}} />
         <Tree content="Liaising with the Business, UX and Marketing teams to drive brand" style={{ color: 'white' }} />
         <Tree content="Prioritising product requirements and implementing agile methodology to speed up delivery" style={{ color: 'white' }} />

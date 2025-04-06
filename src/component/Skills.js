@@ -36,22 +36,17 @@ const Skills = () => (
         </Tree>
     <Tree content="DevOps" type={<span style={typeStyles}></span>}  >
         <Tree content="Version Control /GIT" style={{ color: 'white', align : 'justify'}} />
-        <Tree content="Buddy" style={{ color: 'white', align : 'justify'}} />
+        <Tree content="Openstack" style={{ color: 'white', align : 'justify'}} />
         <Tree content="Docker" style={{ color: 'white' }} />
-        <Tree content="Heroku" style={{ color: 'white' }} />
-        <Tree content="Netlify" style={{ color: 'white' }} />
-        <Tree content="Apache" style={{ color: 'white' }} />
-        <Tree content="Nginx" style={{ color: 'white' }} />
-        <Tree content="DNS, SSL" style={{ color: 'white' }} />
+        <Tree content="Kubernetes" style={{ color: 'white' }} />
+        <Tree content="Jenkins" style={{ color: 'white' }} />
+        <Tree content="Ansible" style={{ color: 'white' }} />
+        <Tree content="Terraform" style={{ color: 'white' }} />
+        <Tree content="Argo CD" style={{ color: 'white' }} />
         <Tree content="Google Cloud Computing" style={{ color: 'white' }} />
-        <Tree content="AWS" style={{ color: 'white' }} />
+        <Tree content="EKS" style={{ color: 'white' }} />
         </Tree>
-     <Tree content="Others" type={<span style={typeStyles}></span>}  >
-        <Tree content="Data Analysis - Tableau , Metabase " style={{ color: 'white', align : 'justify'}} />
-        <Tree content="Helpdesk - Zoho Desk, JIRA " style={{ color: 'white' }} />
-        <Tree content="Document Mangement - Alfresco " style={{ color: 'white' }} />
-        <Tree content="ERP - erpnext " style={{ color: 'white' }} />
-        </Tree>
+     
 
     </Tree>
   </div>

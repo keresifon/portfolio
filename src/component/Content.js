@@ -25,12 +25,12 @@ function Content(props) {
           <Tab eventKey="about" title="About Me"  className="alert p-0 mt-2">
             <About/>
           </Tab>
-          <Tab eventKey="portfolio" title="Portfolio" className="alert p-0 mt-2">
+          {/* <Tab eventKey="portfolio" title="Portfolio" className="alert p-0 mt-2">
             <Portfolio/>
           </Tab>
           <Tab eventKey="contact" title="Contact Me" className="alert p-0 mt-2 ">
             <Contact/>
-          </Tab>
+          </Tab> */}
        
         </Tabs>
    

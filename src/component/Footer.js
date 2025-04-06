@@ -7,10 +7,10 @@ function Footer(props) {
    <div  >
     <Navbar bg="dark" variant="dark"   className="footer" >
     <Nav className="mr-auto">
-    <Nav.Link>This site is set up and running on AWS S3 Bucket</Nav.Link>
+    <Nav.Link>This site is hosted and accessible via Cloudflare tunneling </Nav.Link>
     </Nav>
     <Nav className="ml-auto">
-    <a className= "alert" href="https://keresifon.com">AWS Amplify Version</a> 
+    <a className= "alert" href="https://keresifon.com">© 2025. All Rights Reserved.</a> 
 
     </Nav>
     

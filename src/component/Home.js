@@ -18,12 +18,22 @@ function Home(props) {
 			animation: 'fade',
 		},
 		{
-			text: 'Gatsby.',
+			text: 'GCP.',
 			className: 'h1 text-center introRed',
 			animation: 'fade',
 		},
 		{
 			text: 'AWS.',
+			className: 'h1 text-center introRed',
+			animation: 'fade',
+		},
+		{
+			text: 'Terraform.',
+			className: 'h1 text-center introRed',
+			animation: 'fade',
+		},
+		{
+			text: 'Ansible.',
 			className: 'h1 text-center introRed',
 			animation: 'fade',
 		},
@@ -47,14 +57,14 @@ function Home(props) {
 							>
 								<FaGithub className="h1  iconColor" />
 							</a>
-							<a
+							{/* <a
 								href="https://www.youracclaim.com/badges/049a281e-e56f-496d-b199-21c428f303d0/public_url"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="p-3"
 							>
 								<FaAws className="h1  iconColor" />
-							</a>
+							</a> */}
 							<a
 								href="https://www.linkedin.com/in/keresifon-ekpenyong-baa58810"
 								target="_blank"
@@ -63,14 +73,14 @@ function Home(props) {
 							>
 								<FaLinkedin className="h1  iconColor" />
 							</a>
-							<a
+							{/* <a
 								href="https://www.facebook.com/KwesiFBlack"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="p-3"
 							>
 								<FaFacebook className="h1  iconColor" />
-							</a>
+							</a> */}
 							<a
 								href="https://twitter.com/kwesiblak"
 								target="_blank"
@@ -111,7 +121,7 @@ function Home(props) {
 						<div id="dependencies">
 							<Alert variant="outline-danger" className="alert border">
 								<Alert.Heading>Credit & Dependencies</Alert.Heading>
-								<p>Ella , the model in the background, is one of my twin toddlers.</p>
+								<p>Ella , the model in the background, is one of my twin girls.</p>
 								<hr />
 								<p className="mb-0"></p>
 
